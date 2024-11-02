@@ -67,7 +67,7 @@ color: var(--text-light);
 }
 
 img{
-    widht: 100%;
+    width: 100%;
     display: flex;
 
 }
@@ -83,8 +83,13 @@ a{
     z-index: -1;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+}
 
 body{
+    
     
     font-family: "Oswald", sans-serif;
     background-color: var(--secondary-color);
@@ -92,14 +97,13 @@ body{
    
 }
 
-nav{
-    max-width: var(--max-widht);
-    margin: auto;
-    padding: 2rem 1rem;
+.nav{
+    max-width: 70%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: 0px;
 
 }
 
@@ -218,14 +222,240 @@ nav{
 }
 
 .header__image img{
-    max-width: 350px;
-    magin: auto;
+    max-width: 150px;
+    margin: auto;
     
+}
 
-
-
+.get__started{
+    margin: 40px;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--white);
+    position: absolute;
 
 }
 
 
- 
+    
+   
+
+
+.container {
+    display: block; 
+    gap: 10px;
+    margin-right: 100px; 
+}
+
+.image2 {
+    display: block;
+    margin: auto;
+    max-width: 100%; 
+    height: auto;
+    
+
+}
+
+.marginforTitles2 {
+    margin-left: -100px;
+    margin-top:  50px;
+    display: flex;
+
+}
+
+.card_text{
+    margin: 10px;
+    margin-right: 120px;
+}
+
+nav {
+    background-color:black; 
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0;
+    display: flex; 
+}
+
+nav ul li {
+    flex: 1; 
+}
+
+nav ul li a {
+    display: block; 
+    padding: 14px 20px; 
+    text-align: center; 
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+    
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.cart-table th {
+    background-color: #f2f2f2;
+}
+
+input[type="number"] {
+    width: 50px;
+    text-align: center;
+}
+
+.cart-summary {
+    text-align: right;
+    font-size: 18px;
+}
+
+.checkout-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: #45a049;
+}
+
+
+footer {
+    display: flex;
+    background-color: black;
+    color: white;
+
+}
+
+.background-image {
+    background: url('photos/fitness-gym-background.jpg') no-repeat center center; 
+    background-size: cover; 
+    position: relative; 
+    height: 100%;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+}
+
+h1 {
+    position: relative; 
+    z-index: 2; 
+    color: white; 
+    text-align: center; 
+    padding-top: 14%; 
+    font-size: 64px;
+}
+
+h2 {
+    position: relative; 
+    z-index: 2; 
+    color: white; 
+    text-align: center; 
+    padding-top: 10%; 
+    font-size: 50px;
+}
+
+
+.divider {
+    width: 80%;
+    border: 1px solid white;
+    margin: 20px auto; 
+    z-index: 2;
+    position: relative;
+}
+
+.mission, .call-to-action, .newsletter-signup{
+    text-align: center;
+    position: relative; 
+    font-size: medium;
+    font-weight: 700;
+    color: white;
+    z-index: 2;
+    margin-left: 175px;
+    margin-right: 175px;
+}
+
+.mission > p, .call-to-action > p {
+    letter-spacing: 2px;
+    line-height:2;
+
+}
+
+.call-to-action {
+    margin-top: 10px; 
+}
+
+.register-button {
+    display: inline-block;
+    margin-top: 10px; 
+    padding: 10px 20px;
+    background-color: red; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px; 
+}
+
+.register-button:hover {
+    background-color: maroon; 
+}
+
+
+.shadow {
+    text-shadow: 5px 5px red;
+  }
+
+#navigationButtons {
+    background-color: rgba(64, 64, 64, 0.8);
+
+}
+
+
+
+#footer2{
+    background-color: rgb(32, 32, 32);;
+    position: relative; 
+    z-index: 2; 
+    color: white; 
+
+
+}
