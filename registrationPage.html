@@ -3,53 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Gym Club</title>
 </head>
+<style>
+    html, body {
+      height: 100%;
+        margin : 0;
+        padding: 0;
+    }
+
+    .navbar {
+      padding: 0
+    }
+
+    .background-image {
+      background: url('photos/fitness-gym-background.jpg') repeat center; 
+      background-size: cover; 
+      position: absolute;
+      min-height: 100vh;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: visible;
+
+}
+
+  
+</style>
 <body>
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto" id="navigationButtons">
+        <li class="nav-item active" >
+           <li class="nav-item active">
+          <a class="nav-link" id="hometaskbar" href="mainPage2.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="productstaskbar" href="#">Products</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="carttaskbar" href="cart.html">Cart</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="logintaskbar" href="registrationPage.html">Login</a>
+        </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+   -->
 
-    <h1 style= "text-align: center; color: black;margin-bottom: auto;" >Registration Form</h1>
+   <nav class="navbar navbar-expand-lg navbar-custom">
+    <a class="navbar-brand" href="#">GYM Club</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="#mainPage2.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="cart.html">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="pricingPage.html">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#footer">Contact Us</a></li>
+      </ul>
+      <button class="btn btn-outline-light me-2">Sign In</button>
+      <button class="btn btn-primary btn-outline-light me-3" onclick="window.location.href='registerPage.html'">Register</button>
+      <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#notificationModal">
+          <i class="bi bi-bell"></i> Notifications
+        </button>
+    </div>
+  </nav>
 
-    <hr style="background-color: grey;">
+    
 
-    <div style= "margin-left:575px; font-size: large;">
+    <div class="background-image">
+        <div class="overlay"></div>
+        <div class ="registrationForm" >
+            <form action="/submit.php" method="POST">
 
-    <form action="/submit" method="POST" >
+                <div class="form-group" >
+                    <label for="name">Name: </label>
+                    <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name" required>
+                 </div>
 
-        <label for="name"><b>Name:</b></label>
-        <input type="text" id="name" name="name" required>
-        <br><br>
-     
+                  
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                </div>
 
-        <label for="username"><b>Userame:</b></label>
-        <input type="text" id="username" name="username" required>
-        <br><br>
 
-        <label for="email"><b>Email:</b></label>
-        <input type="email" id="email" name="email" required>
-        <br><br>
+                <div class="form-group">
+                  <label for="password">Password:</label>
+                  <input type="password" class="form-control" id="password" placeholder="Password"required>
+                </div>
 
-        <label for="password"><b>Password:</b></label>
-        <input type="password" id="password" name="password" required>
-        <br><br>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Phone Number:</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Phone Number"required>
+                </div>
 
-        <label for="age"><b>Age:</b></label>
-        <input type="number" id="age" name="age" value="age" required>
-        <br><br>
+               
 
-        <label for="phone"><b>Phone Number:</b></label>
-        <input type="number" id="phone" name="phone" required>
-        <br><br>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" class="form-control" id="age" aria-describedby="emailHelp" placeholder="Enter email" required>
+                </div>
 
-        <label for="gender"><b>Gender:</b></label>
-        <select id="gender" name="gender" required >
-            <option value="male">Male</option>
-            <option value="female" selected="selected">Female</option>
-            <option value="other">Other</option>
-        </select>
-        <br><br>
+                <div class="form-group">
+                <label for="reviewers">Gender:</label><br>
+                <select id="reviewers" name="gender"  required>
+                  <option value="female">Female</option>
+                  <option value="male" selected>Male</option>
+                  <option value="Other">Other</option>
+                </select><br><br>
+                </div>
 
-        <button type="submit" style="margin-left: 70px;padding: 15px 30px; background-color: green; color:aliceblue;font-size: 16px;"><b>Register</b></button>
-    </form>
-</div>
+                  <div class="form-group form-check" >
+                  <input type="checkbox" class="form-check-input" id="checkbox1">
+                  <label class="form-check-label" id="background-color" for="exampleCheck1">Keep Me Signed In</label>
+                </div>
+
+                <div id ="registrationButton">
+                <button  type="submit" class="btn btn-primary">SUBMIT</button>
+                </div>
+                
+        
+
+              </form>
+            </div>
+          </div>
+
+
+
+
+           
+            
+
+
+
+   
+
 </body>
 </html>

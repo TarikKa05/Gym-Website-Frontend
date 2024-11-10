@@ -1,49 +1,156 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Products</title>
 </head>
-<body>
-    <div class="cart-container">
-        <h1>Your Products</h1>
-        <table class="cart-table">
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Total</th>
-                    <th>Extra Prices</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>WHEY PROTEIN</td>
-                    <td>
-                        <input type="number" value="1" min="1">
-                    </td>
-                    <td>40$ </td>
-                    <td>40$ </td>
-                    <td><button>Ukloni</button></td>
-                </tr>
-                <tr>
-                    <td>CREATINE</td>
-                    <td>
-                        <input type="number" value="2" min="1">
-                    </td>
-                    <td>30$</td>
-                    <td>30$</td>
-                    <td><button>Ukloni</button></td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="cart-summary">
-            <h2>Ukupno: 70$</h2>
-            <button class="checkout-button">Procced to payment</button>
-        </div>
+<style>
+    html, body {
+        margin : 0;
+        padding: 0;
+    }
+</style>
+    <body>
+ 
+
+          
+   <nav class="navbar navbar-expand-lg navbar-custom">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto" >
+        <li class="nav-item" ><a class="nav-link" href="mainPage2.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html" >Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Our Mission</a></li>
+        <li class="nav-item"><a class="nav-link" href="#footer">Contact Us</a></li>
+      </ul>
     </div>
-</body>
+  </nav>
+
+
+  <div class="background-image">
+    <div class="overlay"></div>
+    <h1 class="shadow">Thank You For Your pURCHASE</h1>
+
+<hr class="divider">
+
+<div class="mission">
+    <p>NEKI TEKST KAKO SE ZAHVALJUJEMO KAKO KUPUJEMO</p>
+</div>
+
+<div class ="container"  style="z-index: 3">
+  <div class="cart-container" >
+    <h3 style="color: black;">Your Products</h3>
+    <table class="cart-table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price Per Piece</th>
+                <th>Discount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>WHEY PROTEIN</td>
+                <td>
+                    <input type="number" value="1" min="0">
+                </td>
+                <td>40$ </td>
+                <td><input type="text" class="form-control" id="discountCode" aria-describedby="discountCodeHelp" placeholder="Enter discount code"></td>
+            </tr>
+            <tr>
+                <td>CREATINE</td>
+                <td>
+                    <input type="number" value="2" min="0">
+                </td>
+                <td>30$</td>
+                <td><input type="text" class="form-control" id="discountCode" aria-describedby="discountCodeHelp" placeholder="Enter discount code"></td>
+
+            </tr>
+        </tbody>
+    </table>
+    <div class="cart-summary">
+        <h2  style="color: black;">Total: 70$</h2>
+        <button class="checkout-button" data-bs-toggle="modal" data-bs-target="#paymentModal">Procced to payment</button>
+    </div>
+</div>
+</div>
+
+       
+
+    
+
+
+<footer class="footer text-center">
+    <div class="container" id="footer">
+      
+      <ul class="list-inline" id="footerList">
+        <li class="list-inline-item"><a href="https://www.instagram.com/gymlist/?hl=en" target="_blank">Instagram</a></li>
+        <li class="list-inline-item"><a href="https://www.facebook.com/GymAndFitnessCo/" target="_blank">Facebook</a></li>
+        <li class="list-inline-item"><a href="https://www.tiktok.com/@hardbulltraining?lang=en" target="_blank">TikTok</a></li>
+      </ul>
+      <ul id = "footerID" class="list-inline">
+          <li><b>Contact: </b>+387603210136</li>
+          <li><b>Email: </b>gymclub@fitness.ba</li>
+          <li><b>Workig Hours: </b> 7:00 - 23:00</li>
+        </ul>
+        <p>&copy; Gym Club. All rights reserved.</p>
+    </div>
+  </footer>
+    
+</div>
+
+
+<!-- Modal za kupovinu -->
+<div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Notifications</h3>      
+        </div>
+        <div class="modal-body">
+          <p>You have no new notifications at this time.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+        
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+        </body>
+
+        
+        
+
+         
+
+       
+        
+
+
+        
+        
+      
+    
+    
+
+
+       
+
+
+ 
+    
+
 </html>

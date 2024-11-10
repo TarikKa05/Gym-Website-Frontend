@@ -4,8 +4,8 @@
   --primary-color:#111317;
   --primary-color-light:#1f2125;
   --primary-color-extra-light:#35373b;
-  --secondary-color:#f9ac54;
-  --secondary-color-dark:#d79447;
+  --secondary-color:red;
+  --secondary-color-dark:maroon;
   --text-light:#d1d5db;
   --white:#ffffff;
   --max-widht: 1200px;
@@ -20,7 +20,7 @@ box-sizing: border-box;
 }
 
 .section__container{
-    max-widht: var(--max-widht) ;
+    max-width: var(--max-widht) ;
     margin: auto;
     padding: 5rem 1rem;
 
@@ -49,15 +49,16 @@ color: var(--text-light);
 
 
 .btn{
-    padding: 1rem 2rem;
-    outline: none;
-    border: none;
-    font-size: 1rem;
+    padding: 15px 35px;
+    border: 1px darkslategrey solid;
+    font-size: 24px;
     color: var(--white);
     background-color: var(--secondary-color);
-    border-radius: 5px;
+    border-radius: 7px;
     cursor: pointer;
     transition: .3s;
+    font-weight: bold;
+    text-shadow: 2px 2px #111317;
 
 }
 
@@ -88,14 +89,7 @@ html, body {
     padding: 0;
 }
 
-body{
-    
-    
-    font-family: "Oswald", sans-serif;
-    background-color: var(--secondary-color);
 
-   
-}
 
 .nav{
     max-width: 70%;
@@ -263,10 +257,6 @@ body{
 
 }
 
-.card_text{
-    margin: 10px;
-    margin-right: 120px;
-}
 
 nav {
     background-color:black; 
@@ -286,7 +276,7 @@ nav ul li {
 
 nav ul li a {
     display: block; 
-    padding: 14px 20px; 
+    padding: 5px ; 
     text-align: center; 
     color: white;
     text-decoration: none;
@@ -306,7 +296,9 @@ body {
     margin: auto;
     background: white;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    z-index: 3;
+    
 }
 
 h1 {
@@ -352,12 +344,6 @@ input[type="number"] {
 }
 
 
-footer {
-    display: flex;
-    background-color: black;
-    color: white;
-
-}
 
 .background-image {
     background: url('photos/fitness-gym-background.jpg') no-repeat center center; 
@@ -365,6 +351,9 @@ footer {
     position: relative; 
     height: 100%;
     width: 100%;
+    margin: 0;
+    padding: 0;
+
 }
 
 .overlay {
@@ -375,6 +364,7 @@ footer {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5); 
     z-index: 1; 
+    pointer-events: none;
 }
 
 h1 {
@@ -451,11 +441,232 @@ h2 {
 
 
 
-#footer2{
-    background-color: rgb(32, 32, 32);;
-    position: relative; 
-    z-index: 2; 
-    color: white; 
 
+
+.registrationForm {
+    position: relative;
+    z-index: 3; 
+    background-color: rgba(64, 64, 64, 0.8); 
+    padding: 50px;
+    border-radius: 10px; 
+    max-width: 700px;
+    height: 800px;
+    margin-left: 350px;
+    margin-top:50px;
+    box-shadow:  10px 10px rgba(0, 0, 0, 0.5); 
+    
+}
+
+.form-group > label{
+    font-size: 30px;
+    color: white;
+    text-align: justify;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 2px 2px maroon;
+    
+}
+
+.registrationForm input, select {
+    width: 100%; 
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+   
+}
+
+
+
+#registrationButton {
+
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+#hometaskbar{
+   font-size: 50px;
 
 }
+   
+#productstaskbar{
+   font-size: 50px;
+}
+
+
+
+
+    
+
+
+#hometaskbar{
+    margin-left: -370px;
+    font-size: 35px;
+   
+  
+}
+
+#productstaskbar{
+    margin-left: -200px;
+    font-size: 35px;
+}
+
+#carttaskbar{
+    margin-left: -100px;
+    font-size: 35px;
+
+}
+
+#logintaskbar{
+    margin-left: -100px;
+    font-size: 35px;
+
+}
+
+#loginpage{
+    size-adjust: 50px;
+}
+
+
+@media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 12px;
+    }
+  }
+    
+
+
+
+
+/*Nova responsive navigacija   */
+
+.navbar {
+   background-color: rgb(32, 32, 32);
+   
+}
+
+.navbar-custom .nav-link {
+    color: white;
+    font-size: 16px; 
+    padding: 10px; 
+    text-decoration: none; 
+    /* display: flex;
+    justify-content: space-around;  */
+    transition-duration: 0.4s;
+}
+
+.navbar-custom .nav-link:hover,.navbar-custom .nav-link:active {
+    color: red; 
+}
+
+/*Hamburgger meni*/
+
+.navbar-toggler-icon {
+    background-image: none; 
+    background-color: white;
+    width: 30px;
+    height: 3px;
+    position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: "";
+    background-color: white;
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon::after {
+    top: 8px;
+}
+
+/*fOTER*/
+
+footer {
+    display: flex;
+    background-color: rgb(32, 32, 32);
+}
+
+#footer {
+    
+    color: white;
+    z-index: 2;
+}
+
+
+/*pRODUCTS STRANICA*/
+
+/*KARTICE*/
+
+.card {
+    z-index: 2;
+}
+
+
+/* za tabelu na Cart stranici */
+.container {
+    position: relative;
+    z-index: 3; 
+    color: white;
+    margin-top: 20px;
+}
+
+/* Cart Strasnicas novi csss */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 10px;
+    border: 1px solid grey;
+    color:#111317
+}
+
+.cart-summary {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-align: right;
+    color: #111317;
+}
+
+.checkout-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: #218838;
+}
+
+
+#navbarNav{
+    word-spacing: 470px;
+    font-size: 50px;
+    font-style: Arial;
+}
+
+#best{
+    font-size: 25px;
+}
+
