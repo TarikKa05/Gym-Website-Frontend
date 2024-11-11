@@ -1,0 +1,19 @@
+<button class="btn btn-outline-light me-2">Sign In</button>
+<button class="btn btn-primary btn-outline-light me-3" onclick="window.location.href='registrationPage.html'">Register</button>
+<button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#notificationModal">
+    <i class="bi bi-bell"></i> Notifications
+  </button>
+
+
+
+  <div id ="registrationButton">
+    <button  type="submit" class="btn btn-primary">SUBMIT</button>
+    </div>
+          
+
+
+    text-align: justify;
+            
+
+
+

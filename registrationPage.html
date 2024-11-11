@@ -11,82 +11,43 @@
       height: 100%;
         margin : 0;
         padding: 0;
+        background-color: black; 
     }
 
-    .navbar {
-      padding: 0
-    }
-
-    .background-image {
-      background: url('photos/fitness-gym-background.jpg') repeat center; 
-      background-size: cover; 
-      position: absolute;
-      min-height: 100vh;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      overflow: visible;
-
-}
 
   
 </style>
 <body>
-  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto" id="navigationButtons">
-        <li class="nav-item active" >
-           <li class="nav-item active">
-          <a class="nav-link" id="hometaskbar" href="mainPage2.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="productstaskbar" href="#">Products</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="carttaskbar" href="cart.html">Cart</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="logintaskbar" href="registrationPage.html">Login</a>
-        </li>
-        
-        
-      </ul>
-    </div>
-  </nav>
-   -->
-
-   <nav class="navbar navbar-expand-lg navbar-custom">
-    <a class="navbar-brand" href="#">GYM Club</a>
+  <nav class="navbar navbar-expand-lg navbar-custom">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link" href="#mainPage2.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="cart.html">Features</a></li>
-        <li class="nav-item"><a class="nav-link" href="pricingPage.html">Pricing</a></li>
+      <ul class="navbar-nav me-auto" >
+        <li class="nav-item" ><a class="nav-link" href="mainPage2.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html" >Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Our Mission</a></li>
         <li class="nav-item"><a class="nav-link" href="#footer">Contact Us</a></li>
       </ul>
-      <button class="btn btn-outline-light me-2">Sign In</button>
-      <button class="btn btn-primary btn-outline-light me-3" onclick="window.location.href='registerPage.html'">Register</button>
-      <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#notificationModal">
-          <i class="bi bi-bell"></i> Notifications
-        </button>
     </div>
   </nav>
 
-    
+  
 
     <div class="background-image">
         <div class="overlay"></div>
         <div class ="registrationForm" >
-            <form action="/submit.php" method="POST">
+            <form action="https://jsonplaceholder.typicode.com/." method="POST">
 
                 <div class="form-group" >
                     <label for="name">Name: </label>
                     <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name" required>
                  </div>
+
+                 <div class="form-group" >
+                  <label for="name">User Name: </label>
+                  <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name" required>
+               </div>
 
                   
                 <div class="form-group">
@@ -101,9 +62,13 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Phone Number:</label>
-                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Phone Number"required>
+                    <label for="PhoneNumber">Phone Number:</label>
+                    <input type="number" class="form-control" id="PhoneNumber" aria-describedby="Phone Number" placeholder="Enter Phone Number"required>
                 </div>
+                <div class="form-group" >
+                  <label for="name">Height : </label>
+                  <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name" required>
+               </div>
 
                
 
@@ -121,30 +86,12 @@
                 </select><br><br>
                 </div>
 
-                  <div class="form-group form-check" >
-                  <input type="checkbox" class="form-check-input" id="checkbox1">
-                  <label class="form-check-label" id="background-color" for="exampleCheck1">Keep Me Signed In</label>
-                </div>
-
-                <div id ="registrationButton">
-                <button  type="submit" class="btn btn-primary">SUBMIT</button>
-                </div>
-                
-        
+                 
+                  <button  id ="registrationButton" type="submit" class="btn btn-primary">SUBMIT</button>
+              
+                        
 
               </form>
             </div>
-          </div>
 
-
-
-
-           
             
-
-
-
-   
-
-</body>
-</html>
