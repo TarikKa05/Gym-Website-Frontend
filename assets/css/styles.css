@@ -344,28 +344,19 @@ input[type="number"] {
 }
 
 
-
 .background-image {
-    background: url('photos/fitness-gym-background.jpg') no-repeat center center; 
+    background: url('../photos/gymPhoto.jpg') no-repeat center center; 
     background-size: cover; 
-    position: relative; 
-    height: 100%;
+    position: fixed; 
+    height: 100vh;
     width: 100%;
     margin: 0;
     padding: 0;
+    overflow: scroll;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 1);
 
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 1; 
-    pointer-events: none;
-}
 
 h1 {
     position: relative; 
@@ -459,7 +450,7 @@ h2 {
 
 .form-group > label{
     font-size: 25px;
-    color: white;
+    color: black;
     position: relative;
     top: -10px; 
     padding: 2px; 
@@ -471,10 +462,10 @@ h2 {
 
 .registrationForm input, select {
     width: 100%; 
-    padding: 10px;
-    font-size: 16px;
+    padding: 7px;
+    font-size: 14px;
     border-radius: 5px;
-    margin-bottom: px;
+    margin-bottom: -30px;
     margin-top: 5px;
     
    
@@ -499,9 +490,32 @@ h2 {
 }
 
 
-
-
+/*Nova reg forma*/
+.form-label{
+    font-size: 20px;
+    color: black;
+    padding: 2px; 
+    font-weight: bold;
+    margin-bottom: -5px;
     
+    
+}
+
+.form-check-label, .form-check-input{
+    color: black !important;
+    border-color: black !important ;
+
+}
+
+.form-check-input:checked {
+    background-color: maroon!important;  
+    border-color:  maroon!important; ;
+     
+}
+
+input.form-control {
+    width: 100%;
+  }
 
 
 #hometaskbar{
@@ -550,54 +564,9 @@ h2 {
 
 
 
-/*Nova responsive navigacija   */
 
-.navbar {
-   background-color: rgb(32, 32, 32);
-   
-}
 
-.navbar-custom .nav-link {
-    color: white;
-    font-size: 16px; 
-    padding: 10px; 
-    text-decoration: none; 
-    /* display: flex;
-    justify-content: space-around;  */
-    transition-duration: 0.4s;
-}
 
-.navbar-custom .nav-link:hover,.navbar-custom .nav-link:active {
-    color: red; 
-}
-
-/*Hamburgger meni*/
-
-.navbar-toggler-icon {
-    background-image: none; 
-    background-color: white;
-    width: 30px;
-    height: 3px;
-    position: relative;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-    content: "";
-    background-color: white;
-    width: 30px;
-    height: 3px;
-    position: absolute;
-    left: 0;
-}
-
-.navbar-toggler-icon::before {
-    top: -8px;
-}
-
-.navbar-toggler-icon::after {
-    top: 8px;
-}
 
 /*fOTER*/
 
@@ -662,22 +631,75 @@ footer {
     background-color: #218838;
 }
 
+/*Navigacija*/ 
 
-#navbarNav{
-    word-spacing: 470px;
-    font-size: 50px;
-    font-style: Arial;
-}
-
-#best{
-    font-size: 25px;
-}
-
-.form-control{
-    position: relative;
-    top: -15px
+.navbar-custom .nav-link:hover,.navbar-custom .nav-link:active {
+    color: maroon; 
+    font-weight: bolder;
 }
 
 
+.navbar-custom {
+    background-color: rgba(64, 64, 64, 1);
+    padding: 10px 20px;
+  }
 
 
+  .navbar-custom .nav-link, .navbar-custom .navbar-brand {
+    color: #fff;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition-duration: 0.2s;
+  }
+  .navbar-custom .btn-outline-light, .navbar-custom .btn-primary {
+    font-size: 1.1rem;
+  }
+
+
+.navigationButton {
+    background-color: grey;
+    border: 2px solid maroon;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navigationButton:hover, .navigationButton:active {
+    background-color: maroon;
+    border-color: black;
+    color: white;
+}
+
+#navigationButtonCustom {
+    color:white;
+}
+
+#navigationButtonCustom:hover, #navigationButtonCustom:active  {
+    color:white;
+    font-weight: bolder;
+}
+
+
+#registrationFormTitle, #submitBtn {
+    background-color:maroon;
+    font-weight: bolder;
+    text-shadow: 5px 3px #111317;
+}
+
+
+#submitBtn {
+
+    
+    text-shadow: 5px 3px #111317;
+    margin-top: 50px;
+
+}
+    
+#submitBtn:hover, #submitBtn:active{
+    font-weight: 900;
+    text-decoration: underline;
+    box-shadow: 5px 5px 12px  black;
+    border-color: black;
+}
