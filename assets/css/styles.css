@@ -379,7 +379,7 @@ h2 {
 
 .divider {
     width: 80%;
-    border: 1px solid white;
+    border: 1.5px solid white;
     margin: 20px auto; 
     z-index: 2;
     position: relative;
@@ -391,9 +391,15 @@ h2 {
     font-size: medium;
     font-weight: 700;
     color: white;
+    
     z-index: 2;
     margin-left: 175px;
     margin-right: 175px;
+}
+
+.newsletter-signup input {
+    
+    padding: 7px;
 }
 
 .mission > p, .call-to-action > p {
@@ -406,23 +412,28 @@ h2 {
     margin-top: 10px; 
 }
 
-.register-button {
+.small-button {
     display: inline-block;
     margin-top: 10px; 
     padding: 10px 20px;
-    background-color: red; 
+    background-color: rgba(179, 0, 0, 1); 
     color: white; 
     text-decoration: none; 
-    border-radius: 5px; 
+    border-radius: 7px; 
+    letter-spacing: 1px;
 }
 
-.register-button:hover {
+.small-button:hover, .small-button:active {
     background-color: maroon; 
+    font-weight: bolder;
+    border-color: #111317;
+    box-shadow: 2px 2px solid black;
 }
 
 
 .shadow {
-    text-shadow: 5px 5px red;
+    text-shadow: 5px 5px maroon;
+    font-weight: 700;
   }
 
 #navigationButtons {
@@ -430,7 +441,9 @@ h2 {
 
 }
 
-
+.shadow {
+    text-shadow: 5px 5px maroon;
+  }
 
 
 
@@ -579,6 +592,28 @@ footer {
     
     color: white;
     z-index: 2;
+    padding-bottom: 75px;
+}
+
+#footer a, #footer p {
+    color:white;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#footer a:active, #footer a:hover {
+    color:rgba(179, 0, 0, 1);
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-decoration: underline;
+}
+
+
+
+#footerID > li {
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+    font-size: medium;
 }
 
 
@@ -625,6 +660,7 @@ footer {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    border-radius: 7px;
 }
 
 .checkout-button:hover {
@@ -658,7 +694,7 @@ footer {
 
 
 .navigationButton {
-    background-color: grey;
+    background-color: rgba(179, 0, 0, 1);
     border: 2px solid maroon;
     border-radius: 10px;
     font-weight: bold;
