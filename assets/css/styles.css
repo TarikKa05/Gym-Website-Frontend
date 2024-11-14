@@ -402,8 +402,8 @@ h2 {
     padding: 7px;
 }
 
-.mission > p, .call-to-action > p {
-    letter-spacing: 2px;
+.mission > article, .call-to-action > p, .call-to-action > article {
+    letter-spacing: 1.5px;
     line-height:2;
 
 }
@@ -595,13 +595,13 @@ footer {
     padding-bottom: 75px;
 }
 
-#footer a, #footer p {
+.customLink{
     color:white;
     font-weight: 600;
     letter-spacing: 1px;
 }
 
-#footer a:active, #footer a:hover {
+.customLink:active, .customLink:hover {
     color:rgba(179, 0, 0, 1);
     font-weight: 800;
     letter-spacing: 1.5px;
@@ -738,4 +738,77 @@ footer {
     text-decoration: underline;
     box-shadow: 5px 5px 12px  black;
     border-color: black;
+}
+
+
+#gymVideo {
+    width: 750px;
+    height: 290px;
+
+}
+
+.employeesContainer {
+    width: 100%;
+    height: 420px;
+    background-color: maroon;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-around;
+    
+    border-radius: 7px;
+}
+.employee {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.styled-picture {
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 9px;
+    
+    width: 240px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.styled-picture:hover {
+    width: 250px;
+    height: 320px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.centerContainer{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding-top: 15px;
+
+}
+.coordinatesDiv {
+    width: 350px;
+    height: 120px;
+    background-color: maroon;
+    padding-top:15px;
+   
+    
+    
+    border-radius: 7px;
+
+}
+
+
+
+#feedbackForm {
+    background-color: rgba(64, 64, 64, 0.8); 
+   
+    border-radius: 10px; 
+    max-width: 700px;
+    height: 650px;
+    box-shadow:  5px 5px rgba(0, 0, 0, 0.5); 
+    
 }
