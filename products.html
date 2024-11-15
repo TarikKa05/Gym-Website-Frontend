@@ -4,92 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
     <title>Products</title>
 </head>
+
+<!-- <style>
+  
+  footer {
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+} -->
+
 <style>
-    html, body {
-        margin : 0;
-        padding: 0;
-    }
-</style>
+
+footer {
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+    </style>
+
+
     <body>
  
-
-          
-   <!-- <nav class="navbar navbar-expand-lg navbar-custom">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto" >
-        <li class="nav-item" ><a class="nav-link" href="mainPage2.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="products.html" >Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">Our Mission</a></li>
-        <li class="nav-item"><a class="nav-link" href="#footer">Contact Us</a></li>
-      </ul>
-    </div>
-  </nav> -->
-
-  <nav class="navbar navbar-expand-lg navbar-custom">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto" >
-        <li class="nav-item" ><a class="nav-link" href="landingPage.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="products.html" >Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">Our Mission</a></li>
-        <li class="nav-item"><a class="nav-link" href="#footer">Contact Us</a></li>
-      </ul>
-    </div>
-  </nav>
+      <nav class="navbar navbar-expand-lg navbar-custom">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="landingPage.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">Mission</a></li>
+            <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+          </ul>
+          <button class="navigationButton"><a class="nav-link" id="navigationButtonCustom" href="registrationPage.html">Sign In</a></button>
+        </div>
+      </nav>
+      
+    
 
           <div class="background-image">
-            <div class="overlay"></div>
-            <h1 class="shadow">Explore Our Products</h1>
+            <div class="container  text-center ps-3 pe-3" style="align-items: center;">
+      
+            <h1 class="shadow" style="padding-top: 100px;">Explore Our Products</h1>
         
         <hr class="divider">
 
         <div class="mission" id="best">
             <p>We offer only the best, top 3 products that will help you improve your training.</p>
-        </div>
+        </div> 
+     
 
-        <div id = "products12">
-            <div class="row mb-5">
-              <div class="col-md-4">
-                <div class="card text-center"  >
+        <div class="container my-5" style="display: flex;">
+            <div class="row justify-content-center gy-4">
+              <div class="col-12 col-md-4">
+                <div class="card h-100 text-center text-black" class="productCards" >
                   <div class="card-body">
-                    <h5 class="card-title">Whey Protein</h5>
+                    <h3 class="card-title"><b>Whey Protein</b></h3>
                     <p class="card-text">Whey protein is a mixture of proteins isolated from whey, the liquid material created as a by-product of cheese production.</p>
-                    <a href="#" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#nutritiveValues1Modal">Learn More</a>
-                    <a href="cart.html" class="btn btn-primary">Buy</a>
+                    <a href="#" class="btn btn-primary" class="productsButtons" data-bs-toggle="modal" data-bs-target="#nutritiveValues1Modal">Learn More</a>
+                    <a href="cart.html" class="btn btn-primary"  class="productsButtons" >Buy</a>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="card text-center">
+              <div class="col-12 col-md-4">
+                <div class="card h-100 text-center text-black">
                   <div class="card-body">
-                    <h5 class="card-title">Creatin</h5>
+                    <h3 class="card-title"><b>Creatin</b></h3>
                     <p class="card-text">Creatine is a natural source of energy that helps your skeletal muscles flex (contract).</p>
-                    <a href="#" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#nutritiveValues1Modal">Learn More</a>
-                    <a href="cart.html" class="btn btn-primary">Buy</a>
+                    <a href="#" class="productsButtons"  data-bs-toggle="modal" data-bs-target="#nutritiveValues1Modal">Learn More</a>
+                    <a href="cart.html" class="productsButtons" >Buy</a>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="card text-center">
+              <div class="col-12 col-md-4">
+                <div class="card h-100 text-center text-black">
                   <div class="card-body">
-                    <h5 class="card-title">Omega 3</h5>
+                    <h3 class="card-title"><b>Omega 3</b></h3>
                     <p class="card-text">Omega-3 fatty acids are “healthy fats” that may support your heart health. One key benefit is helping to lower your triglycerides</p>
-                    <a href="#" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#nutritiveValues1Modal">Learn More</a>
-                    <a href="cart.html" class="btn btn-primary">Buy</a>
+                    <a href="#" class="productsButtons" data-bs-toggle="modal" data-bs-target="#nutritiveValues1Modal">Learn More</a>
+                    <a href="cart.html" class="productsButtons">Buy</a>
 
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
           
 
 
@@ -98,7 +102,7 @@
     
 
 
-<footer class="footer text-center">
+<footer class="footer text-center py-4">
     <div class="container" id="footer">
       
       <ul class="list-inline" id="footerList">
