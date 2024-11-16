@@ -295,9 +295,10 @@ body {
     max-width: 800px;
     margin: auto;
     background: white;
-    padding: 20px;
+    padding: 7px 15px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
     z-index: 3;
+    border-radius: 7px;
     
 }
 
@@ -305,21 +306,25 @@ h1 {
     text-align: center;
 }
 
-.cart-table {
+.cart-table th {
     width: 100%;
-    border-collapse: collapse;
     margin-bottom: 20px;
+   
+    
 }
+    
+   
+    
+
 
 .cart-table th, .cart-table td {
-    border: 1px solid #ddd;
+    border: 1px solid  #FFFFFF;
     padding: 10px;
     text-align: center;
+      
 }
 
-.cart-table th {
-    background-color: #f2f2f2;
-}
+
 
 input[type="number"] {
     width: 50px;
@@ -332,15 +337,23 @@ input[type="number"] {
 }
 
 .checkout-button {
-    padding: 10px 20px;
+    padding: 3px;
     background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
+    height: 50px;
+    width: 270px;
+    font-weight: 400;
+    padding-top: 5px;
 }
 
 .checkout-button:hover {
     background-color: #45a049;
+    font-weight:500;
+    text-decoration: underline;
+    border: 1px solid black;
+    box-shadow: 5px 5px 12px  black;
 }
 
 
@@ -434,6 +447,7 @@ h2 {
 .shadow {
     text-shadow: 5px 5px maroon;
     font-weight: 700;
+    margin-top: -70px;
   }
 
 #navigationButtons {
@@ -647,7 +661,7 @@ footer {
 }
 
 .cart-table th, .cart-table td {
-    padding: 10px;
+    
     border: 1px solid grey;
     color:#111317
 }
@@ -845,5 +859,18 @@ footer {
     border-color: black;
     color: white;
     text-decoration: underline;
+    box-shadow: 5px 5px 12px  black;
 }
 
+
+
+/*Tabela cart str*/
+
+.customHeader > th {
+    background-color: maroon;
+    color:white;
+    text-align: center;
+    font-weight: 700;
+
+
+}
