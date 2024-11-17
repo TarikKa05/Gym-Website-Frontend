@@ -1,282 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css"/>
-    <title>Gym Club</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <title>Gym Club</title>
 </head>
 
 <body>
- 
 
-  <nav class="navbar navbar-expand-lg navbar-custom">
-     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link" href="landingPage.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
-        <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
-      </ul>
-      <button class="navigationButton"><a class="nav-link" id="navigationButtonCustom" href="registrationPage.html">Sign In</a></button>
-    </div>
-  </nav>
-</div>
-  
-
-
-
-          <div class="background-image">
-            <h1 class="shadow">BUILD YOUR BODY</h1>
-        
-            <hr class="divider">
-
-        <div class="mission">
-            <article>At GYM Club, we strive to create a welcoming and motivating environment for all fitness levels. Our goal is to empower individuals to achieve their health and wellness goals through innovative training programs, state-of-the-art facilities, and community support.</article>
-        </div>
-
-        <div class="call-to-action">
-          <h2 class="shadow">Get To Know Us!</h2>
-          
-          <p>See what you can expect. Healthy supporting community!</p>
-          <hr class="divider">
-          <video id ="gymVideo" controls>
-            <source src="assets/photos/gym_video.mp4" type="video/mp4">
-            Gym Video - Coach and Person trainig ogether.
-          </video>
-          <hr class="divider">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="landingPage.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+        </ul>
+        <button class="navigationButton"><a class="nav-link" id="navigationButtonCustom"
+            href="registrationPage.html">Sign In</a></button>
       </div>
+    </nav>
+  </header>
 
- <div class="call-to-action">
-        <h2 class="shadow">Meet the Team!</h2>
-        <q><i>Teamwork is the dreamwork - meet the company employees</i></q>
+  <div class="container-fluid background-image">
+
+
+    <section id="introduction">
+
+      <div class="container section text-center">
+        <h1 class="shadow display-5">BUILD YOUR BODY</h1>
+        <p class="fs-4">At GYM Club, we try to empower individuals to achieve their
+          health and wellness goals through innovative training programs, healthy supplements, and community support.
+        </p>
         <hr class="divider">
-        <div class="employeesContainer">
-          <div class="employee">
-          <img src="assets/photos/SLIKA1.jfif" alt="Professional man in business suit" class="styled-picture">
-          <h3>Rijad P.</h3>
-          <h4><u>Company Owner</u></h4>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8">
+            <video id="gymVideo" controls class="w-100 mb-4">
+              <source src="assets/photos/gym_video.mp4" type="video/mp4">
+              Gym Video - Coach and Person trainig ogether.
+            </video>
+          </div>
         </div>
-        <div class="employee">
-          <img src="assets/photos/SLIKA2.jfif" alt="Professional man in business suit" class="styled-picture">
-          <h3>Pilki.</h3>
-          <h4><u>Economist</u></h4>
+        <hr class="divider">
+
+      </div>
+      <div class="container section text-center">
+        <h2 class="shadow display-5">Join Us Today!</h2>
+        <p class="sameSubTexts">Experience the difference. Sign up now and start your journey towards a healthier
+          lifestyle!</p>
+        <a href="registrationPage.html" class="btn btn-success">Register Now</a>
+      </div>
+    </section>
+
+
+    <section id="findUs">
+      <div class="container section text-center">
+        <h2 class="shadow display-5">Come Meet Us!</h2>
+        <article class="sameSubTexts">If you still have any doubts come meet us in person. These are our coordinates:
+        </article>
+        <!-- <hr class="divider">
+          <div class = "centerContainer">
+          <div class="coordinatesDiv"> -->
+        <div class="row justify-content-center mt-3">
+          <div class="col-12 col-sm-8 col-md-6 d-flex justify-content-center">
+            <div class="coordinatesDiv">
+              <h3><b>Latitude:</b> 43.8563</h3>
+              <h3><b>Longitude:</b> 18.4131</h3>
+            </div>
+          </div>
         </div>
-        <div class="employee">
-          <img src="assets/photos/SLIKA3.jfif" alt="Professional man in business suit" class="styled-picture">
-          <h3>Danko</h3>
-          <h4><u>Software Engineer</u></h4>
-        </div>
+        <button onclick="getLocation()" class="btn btn-success mt-3">Check Your Coordinates</button>
+        <p id="location"></p>
+        <article class="sameSubTexts">You can always find us using <a
+            href="https://www.google.com/maps?q=43.8563,18.4131" target="_blank" class="customLink">Google Maps.</a>
+        </article>
 
-
-
-
-
-        </div>
-       
-    </div>
-
-
+      </div>
+    </section>
 
 
     <hr class="divider">
 
-        <div class="call-to-action">
-            <h2 class="shadow">Join Us Today!</h2>
-            <p>Experience the difference. Sign up now and start your journey towards a healthier lifestyle!</p>
-            <a href="registrationPage.html" class="small-button">Register Now</a>
-        </div>
 
 
-        <div class="call-to-action">
-          <h2 class="shadow">Come Meet Us!</h2>
-          <article>If you still have any doubts come meet us in person. These are our coordinates:</article>
-          <hr class="divider">
-          <div class = "centerContainer">
-          <div class="coordinatesDiv">
-            <h3><b>Latitude:</b> 43.8563</h3>
-            <h3><b>Longitude:</b> 18.4131</h3>
-          </div></div>
-          <button onclick="getLocation()" class="small-button">Check Yur Coordinaates</button>
-          <p id="location"></p>
-          <article>You can always find us using <a href="https://www.google.com/maps?q=43.8563,18.4131" target="_blank" class="customLink">Google Maps.</a></article>
-
-      </div>
-
-
-       
-
-        <div class="newsletter-signup" style="padding-bottom: 50px;">
-            <h2 class="shadow">Subscribe to Our Newsletter</h2>
-            <form  method="post">
-                <input type="email" placeholder="Your email" required>
-                <button type="button" class="small-button" style="outline:none; border-radius: 10px;" data-bs-toggle="modal" data-bs-target="#subscriptionModal">Subscribe</button>
-            </form>
-        </div>
-
-        <div class="newsletter-signup" style="padding-bottom: 50px;">
-          <h2 class="shadow">Contact Us</h2>
-          <p>If you have any questions, send us an email.</p>
-          <hr class="divider">
-          
-
-
-        <div class="container my-5">
-          <div class="row">
-            <div class="col-12 col-sm-8 col-md-6 mx-auto">
-          <div class="card" style=" border-color: maroon;">
-              <div class="card-header text-center" id="registrationFormTitle">
-                  <h3>Customer Feedback</h3>
-              </div>
-              <div class="card-body">
-                  <form action="mailto:amela.vatres@stu.ibu.edu.ba" method="post" class="was-validated" novalidate id="registrationForm">
-                    
-                      <div class="mb-3">
-                          <label for="email" class="form-label">Email:</label>
-                          <input type="email" class="form-control" id="email" name="email" required>
-                          <div class="valid-feedback">Looks good!</div>
-                          <div class="invalid-feedback">Please enter a valid email address.</div>
-                      </div>
-
-                      <div class="mb-3">
-                          <label for="title" class="form-label">Feedback Title:</label>
-                          <input type="text" class="form-control" id="title" name="title" required>
-                          <div class="valid-feedback">Looks good!</div>
-                          <div class="invalid-feedback">Please enter a title for your feedback.</div>
-                      </div>
-  
-                      <div class="mb-3">
-                          <label for="message" class="form-label">Your Message:</label>
-                          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                          <div class="valid-feedback">Looks good!</div>
-                          <div class="invalid-feedback">Please enter your message.</div>
-                      </div>
-      
-                
-                      <div class="mb-3 form-check">
-                          <input type="checkbox" class="form-check-input" id="confirmEmail" name="confirmEmail">
-                          <label class="form-check-label" for="confirmEmail">I want to receive a confirmation of my message to my email.</label>
-                      
-                      </div>
-      
-                      <button type="submit" class="btn btn-primary w-100 d-flex justify-content-center align-items-center" id="submitBtn">
-                          Submit Feedback
-                      </button>
-                  </form>
-              </div>
+    <section id="fcontactInformation">
+      <div class="container section text-center">
+        <h2 class="shadow display-5">Customer Support</h2>
+        <div class="row justify-content-center">
+          <p class="sameSubTexts">If you have any questions, send us an email.</p>
+          <div class="col-12 col-md-6">
+            <a href="mailto:amela.vatres@stu.ibu.edu.ba" class="btn btn-primary w-100">
+              Send us Email
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-      
 
-        
-    
+      <hr class="divider">
 
 
-<footer class="footer text-center">
-    <div class="container" id="footer">
-      
-      <ul class="list-inline">
-        <li class="list-inline-item"><a href="https://www.instagram.com/gymlist/?hl=en" target="_blank" class="customLink">Instagram</a></li>
-        <li class="list-inline-item"><a href="https://www.facebook.com/GymAndFitnessCo/" target="_blank" class="customLink">Facebook</a></li>
-        <li class="list-inline-item"><a href="https://www.tiktok.com/@hardbulltraining?lang=en" target="_blank" class="customLink">TikTok</a></li>
-      </ul>
-      <ul id = "footerID" class="list-inline">
+      <div class="container section text-center">
+        <h2 class="shadow display-5">Subscribe to Our Newsletter</h2>
+        <form method="post" class="row justify-content-center">
+          <div class="col-12 col-md-6">
+            <input type="email" class="form-control mb-2" placeholder="Your email" required>
+            <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+              data-bs-target="#subscriptionModal">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+
+
+    <footer class="footer text-center mt-5 mb-0">
+      <div class="container" id="footer">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://www.instagram.com/gymlist/?hl=en" target="_blank"
+              class="customLink">Instagram</a></li>
+          <li class="list-inline-item"><a href="https://www.facebook.com/GymAndFitnessCo/" target="_blank"
+              class="customLink">Facebook</a></li>
+          <li class="list-inline-item"><a href="https://www.tiktok.com/@hardbulltraining?lang=en" target="_blank"
+              class="customLink">TikTok</a></li>
+        </ul>
+        <ul class="list-unstyled">
           <li><b>Contact: </b>+387603210136</li>
           <li><b>Email: </b>gymclub@fitness.ba</li>
           <li><b>Workig Hours: </b> 7:00 - 23:00</li>
         </ul>
-        <p>&copy; IBU 061 Foundations of Web Development - Tarik Korman</p>
-    </div>
-  </footer>
-    
-</div>
+        <p><b>&copy; IBU 061 Foundations of Web Development - Tarik Korman</b></p>
+      </div>
+    </footer>
+  </div>
+
+  </div>
 
 
-<!-- Modal za subscription -->
-<div class="modal fade" id="subscriptionModal" tabindex="-1" aria-labelledby="subscriptionModalLabel" aria-hidden="true">
+  <!-- Modal za subscription -->
+  <div class="modal fade" id="subscriptionModal" tabindex="-1" aria-labelledby="subscriptionModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h3>Success!</h3>      
+          <h3>Success!</h3>
         </div>
         <div class="modal-body">
           <p>Thank you for subscribing to our newsletter.</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="checkout-button" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
-    
 
 
 
-        
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  function getLocation() {
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function getLocation() {
       if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
       } else {
-          document.getElementById("location").innerText = "Geolocation is not supported by this browser.";
+        document.getElementById("location").innerText = "Geolocation is not supported by this browser.";
       }
-  }
+    }
 
-  function showPosition(position) {
-      document.getElementById("location").innerText = 
-          `Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`;
-  }
+    function showPosition(position) {
+      document.getElementById("location").innerText =
+        `Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`;
+    }
 
-  function showError(error) {
-      switch(error.code) {
-          case error.PERMISSION_DENIED:
-              document.getElementById("location").innerText = "User denied the request for Geolocation.";
-              break;
-          case error.POSITION_UNAVAILABLE:
-              document.getElementById("location").innerText = "Location information is unavailable.";
-              break;
-          case error.TIMEOUT:
-              document.getElementById("location").innerText = "The request to get user location timed out.";
-              break;
-          case error.UNKNOWN_ERROR:
-              document.getElementById("location").innerText = "An unknown error occurred.";
-              break;
+    function showError(error) {
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          document.getElementById("location").innerText = "User denied the request for Geolocation.";
+          break;
+        case error.POSITION_UNAVAILABLE:
+          document.getElementById("location").innerText = "Location information is unavailable.";
+          break;
+        case error.TIMEOUT:
+          document.getElementById("location").innerText = "The request to get user location timed out.";
+          break;
+        case error.UNKNOWN_ERROR:
+          document.getElementById("location").innerText = "An unknown error occurred.";
+          break;
       }
-  }
-</script>
+    }
+  </script>
 
 
-    
-        </body>
+</body>
 
-        
-        
-
-         
-        </html>
-       
-        
-
-
-        
-        
-      
-    
-    
-
-
-       
-
-
- 
-    
 
 </html>

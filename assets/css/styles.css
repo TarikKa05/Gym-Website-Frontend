@@ -59,6 +59,7 @@ color: var(--text-light);
     transition: .3s;
     font-weight: bold;
     text-shadow: 2px 2px #111317;
+    border-radius: 7px;
 
 }
 
@@ -370,6 +371,13 @@ input[type="number"] {
 
 }
 
+/* .background-image {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-attachment: fixed;
+} */
+
 
 h1 {
     position: relative; 
@@ -378,6 +386,7 @@ h1 {
     text-align: center; 
     padding-top: 14%; 
     font-size: 64px;
+    font-weight: 700;
 }
 
 h2 {
@@ -387,6 +396,12 @@ h2 {
     text-align: center; 
     padding-top: 10%; 
     font-size: 50px;
+    font-weight: 600;
+}
+
+h3 {
+    font-style: italic;
+    font-weight: 500;
 }
 
 
@@ -421,6 +436,18 @@ h2 {
 
 }
 
+.sameSubTexts {
+    letter-spacing: 1.5px;
+    line-height:2;
+    font-size:20px;
+
+}
+
+#location {
+    letter-spacing: 1.5px;
+    line-height:2;
+    font-size:20px;
+}
 .call-to-action {
     margin-top: 10px; 
 }
@@ -461,7 +488,7 @@ h2 {
 
 
 
-.registrationForm {
+ .registrationForm {
     position: relative;
     z-index: 3; 
     background-color: rgba(64, 64, 64, 0.8); 
@@ -473,7 +500,7 @@ h2 {
     margin-top: 0px;
     box-shadow:  5px 5px rgba(0, 0, 0, 0.5); 
     
-}
+}  
 
 .form-group > label{
     font-size: 25px;
@@ -504,7 +531,7 @@ h2 {
 
     text-align: center;
     margin-top: 35px;
-}
+} 
 
 
 #hometaskbar{
@@ -595,24 +622,33 @@ input.form-control {
 
 
 
-/*fOTER*/
+/*FOOTER*/
 
 footer {
     display: flex;
     background-color: rgb(32, 32, 32);
     justify-content: center;
-    height: 100%;
-}
+    align-items: center; 
+    height: 300px;
+    color: white;
+    text-align: center;
+    margin: 0px;
+} 
 
 #footer {
-    
+    display: flex;
+    justify-content: center;
     color: white;
     z-index: 2;
-   margin-bottom: 75px;
-   margin-right: 29px;
-   margin-left: 29px;
-   align-items: center;
+    margin-bottom: 75px;
+    margin-right: 29px;
+    margin-left: 29px;
+    flex-direction: row;
+    align-items: center; 
+    flex-direction: column; 
+    margin: 0px;
 }
+
 
 .customLink{
     color:white;
@@ -737,18 +773,20 @@ footer {
 }
 
 
-#registrationFormTitle, #submitBtn {
+#registrationFormTitle{
+    
     background-color:maroon;
     font-weight: bolder;
     text-shadow: 5px 3px #111317;
-}
-
+} 
+ 
 
 #submitBtn {
 
-    
+    background-color:rgba(179, 0, 0, 1);
     text-shadow: 5px 3px #111317;
     margin-top: 50px;
+    font-weight: bolder;
 
 }
     
@@ -757,6 +795,7 @@ footer {
     text-decoration: underline;
     box-shadow: 5px 5px 12px  black;
     border-color: black;
+    background-color:maroon;
 }
 
 
@@ -809,17 +848,14 @@ footer {
 
 }
 .coordinatesDiv {
-    width: 350px;
-    height: 120px;
     background-color: maroon;
-    padding-top:15px;
-   
-    
-    
+    padding:15px;
+    margin-bottom: 15px;
+    text-align:center;
     border-radius: 7px;
+    color: white;
 
 }
-
 
 
 #feedbackForm {
@@ -831,6 +867,22 @@ footer {
     box-shadow:  5px 5px rgba(0, 0, 0, 0.5); 
     
 }
+
+
+.section {
+    margin-top: 60px;
+}
+
+
+@media (max-width: 576px) {
+    .shadow {
+        font-size: 1.8rem;
+    }
+    .fs-4 {
+        font-size: 1.2rem;
+    }
+}
+
 /*Products*/
 
 .productsCard {
@@ -849,7 +901,7 @@ footer {
     transition: 0.3s;
     padding: 17px;
     color: white;
-    margin-top:200px;
+    margin-top: 20px;
     transition-duration: 0.3s;
 
 }
@@ -873,4 +925,67 @@ footer {
     font-weight: 700;
 
 
+}
+
+
+
+/*najnoviji css za kartice na products stranici*/
+.card {
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.card img {
+    height: 170px; 
+    object-fit: contain; 
+    margin-bottom: 10px; 
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+/*Responsiveness for title andf text*/
+
+    .background-image h1 {
+        font-size: 3rem; 
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .mission p {
+        font-size: 1.5rem; 
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .background-image h1 {
+            font-size: 2rem; 
+            padding-top: 50px; 
+        }
+
+        .mission p {
+            font-size: 1.25rem; 
+        }
+    }
+
+    @media (max-width: 576px) {
+        .background-image h1 {
+            font-size: 1.5rem; 
+            padding-top: 30px; 
+        }
+
+        .mission p {
+            font-size: 1rem; 
+        }
+    }
+
+#successfulMarkSymbol {
+    width:130px;
+    height:120px;
+    padding-bottom: 10px;
 }

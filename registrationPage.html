@@ -1,103 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css"/>
-    
-    <title>Registration</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/registrationForm.css" />
+
+  <title>Registration</title>
 </head>
 
 
 <body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="landingPage.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="landingPage.html">Contact</a></li>
+        </ul>
 
-  <nav class="navbar navbar-expand-lg navbar-custom">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link" href="landingPage.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">Mission</a></li>
-        <li class="nav-item"><a class="nav-link" href="landingPage.html">Contact</a></li>
-      </ul>
-      
-    </div>
-  </nav>
-  
+      </div>
+    </nav>
+  </header>
 
 
 
   <div class="background-image">
-    <div class="container my-5" >
-      <div class="card mx-auto" style="max-width: 600px;border-color: maroon;">
-          <div class="card-header text-center" id = "registrationFormTitle">
+    <section id="registrationFormInformation">
+      <div class="container my-5">
+        <div class="card mx-auto" style="max-width: 600px;border-color: maroon;">
+          <div class="card-header text-center" id="registrationFormTitle">
             <h3>REGISTRATION</h3>
           </div>
           <div class="card-body">
-   
-                    <form action="https://jsonplaceholder.typicode.com/" method="POST" class="was-validated" novalidate id="registrationForm">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Name:</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
-                                <div class="valid-feedback">Looks good!</div>
-                                <div class="invalid-feedback">Please enter your name.</div>
-                            </div>
 
-                            <div class="mb-3">
-                              <label for="username" class="form-label">Username:</label>
-                              <input type="text" class="form-control" id="username" name="username" required>
-                              <div class="valid-feedback">Looks good!</div>
-                              <div class="invalid-feedback">Please enter something.</div>
-                          </div>
+            <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="was-validated" novalidate
+              id="registrationForm">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
 
-                            <div class="mb-3">
-                              <label for="email" class="form-label">Email:</label>
-                              <input type="email" class="form-control" id="email" name="email" required>
-                              <div class="valid-feedback">Looks good!</div>
-                              <div class="invalid-feedback">Please enter correct emil format.</div>
-                          </div>
+              <div class="mb-3">
+                <label for="username" class="form-label">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter something.</div>
+              </div>
 
-                          <div class="mb-3">
-                            <label for="password" class="form-label">Password:</label>
-                            <input type="password" class="form-control" id="password" name="password" required>
-                            <div class="valid-feedback">Looks good!</div>
-                            <div class="invalid-feedback">Please enter something.</div>
-                        </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter correct emil format.</div>
+              </div>
 
-                        <div class="mb-3">
-                          <label for="phoneNumber" class="form-label">Phone Number:</label>
-                          <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" required>
-                          <div class="valid-feedback">Looks good!</div>
-                          <div class="invalid-feedback">Please enter somethng.</div>
-                      </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter something.</div>
+              </div>
 
-                      <div class="mb-3">
-                        <label for="height" class="form-label">Height:</label>
-                        <input type="number" class="form-control" id="height" name="height" min="100" required>
-                        <div class="valid-feedback">Looks good!</div>
-                        <div class="invalid-feedback">Enter value greater than 100cm.</div>
-                    </div>
+              <div class="mb-3">
+                <label for="phoneNumber" class="form-label">Phone Number:</label>
+                <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter somethng.</div>
+              </div>
 
-                    <div class="mb-3">
-                      <label for="weight" class="form-label">Weight:</label>
-                      <input type="number" class="form-control" id="weight" name="weight" min="40" required>
-                      <div class="valid-feedback">Looks good!</div>
-                        <div class="invalid-feedback">Enter value greater than 40kg.</div>
-                  </div>
+              <div class="mb-3">
+                <label for="height" class="form-label">Height:</label>
+                <input type="number" class="form-control" id="height" name="height" min="100" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Enter value greater than 100cm.</div>
+              </div>
 
-                  <div class="mb-3">
-                    <label for="country" class="form-label">Country:</label>
-                    <input type="text" class="form-control" id="country" name="country" required>
-                    <div class="valid-feedback">Looks good!</div>
-                          <div class="invalid-feedback">Please enter somethng.</div>
-                </div>
+              <div class="mb-3">
+                <label for="weight" class="form-label">Weight:</label>
+                <input type="number" class="form-control" id="weight" name="weight" min="40" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Enter value greater than 40kg.</div>
+              </div>
 
-                <div class="mb-3">
-                  <label for="sport" class="form-label">How active you are:</label>
+              <div class="mb-3">
+                <label for="country" class="form-label">Country:</label>
+                <input type="text" class="form-control" id="country" name="country" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter somethng.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="sport" class="form-label">How active you are:</label>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                   <label class="form-check-label" for="flexRadioDefault1">
@@ -117,32 +121,35 @@
                   </label>
                 </div>
 
-                          
-                
-                  
-                
-                            <div class="mb-3">
-                              <label for="gender" class="form-label">Gender:</label>
-                              <select class="form-select" id="gender" name="gender" required>
-                                  <option value="Female">Female</option>
-                                  <option value="Male" selected>Male</option>
-                                  <option value="Other">Other</option>
-                              </select>
-                          </div>
-                          
-                          <button type="submit" class="btn btn-primary w-100 d-flex justify-content-center align-items-center" id="submitBtn">
-                              Submit
-                          </button>
-                      </form>
-                  </div>
-              </div>
+
+
+
+
+                <div class="mb-3">
+                  <label for="gender" class="form-label">Gender:</label>
+                  <select class="form-select" id="gender" name="gender" required>
+                    <option value="Female">Female</option>
+                    <option value="Male" selected>Male</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 d-flex justify-content-center align-items-center"
+                  id="submitBtn">
+                  Submit
+                </button>
+            </form>
           </div>
-              
-                        
+        </div>
+      </div>
+    </section>
 
-              </form>
-            </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
