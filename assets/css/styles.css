@@ -1,0 +1,991 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+:root{
+  --primary-color:#111317;
+  --primary-color-light:#1f2125;
+  --primary-color-extra-light:#35373b;
+  --secondary-color:red;
+  --secondary-color-dark:maroon;
+  --text-light:#d1d5db;
+  --white:#ffffff;
+  --max-widht: 1200px;
+
+}
+
+*{
+
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+.section__container{
+    max-width: var(--max-widht) ;
+    margin: auto;
+    padding: 5rem 1rem;
+
+}
+
+.section__header{
+
+margin-bottom: 1rem;
+font-size: 2.25rem;
+font-weight: 600;
+text-align: center;
+color: var(--white);
+
+
+}
+
+.section__subheader{
+
+
+max-width: 600px;
+margin: auto;
+text-align: center;
+color: var(--text-light);
+
+}
+
+
+.btn{
+    padding: 15px 35px;
+    border: 1px darkslategrey solid;
+    font-size: 24px;
+    color: var(--white);
+    background-color: var(--secondary-color);
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: bold;
+    text-shadow: 2px 2px #111317;
+    border-radius: 7px;
+
+}
+
+.btn:hover{
+    background-color: var(--secondary-color-dark);
+
+}
+
+img{
+    width: 100%;
+    display: flex;
+
+}
+
+a{
+    text-decoration: none;
+
+}
+
+.bg__blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px var(--secondary-color);
+    z-index: -1;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.nav{
+    max-width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: 0px;
+
+}
+
+.nav__logo{
+    
+    max-width: 150px;
+
+}
+
+.nav__links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+}
+
+.link a{
+    position: relative;
+    padding-bottom: .75rem;
+    color: var(--white);
+
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--secondary-color);
+    transition: 0.3s;
+
+}
+
+.link a:hower::after{
+    width: 50%;
+}
+
+.header__container{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1r);
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.header__container::before{
+    content: "FITNESS";
+    position: absolute;
+    bottom: 5rem;
+    right: 20rem;
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: 7rem;
+    color: var(--white);
+    opacity: 0.05;
+    z-index: -1;
+
+}
+
+.header__blur{
+    bottom: 5rem;
+    right: 0;
+
+}
+
+.header__content h4{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+
+}
+
+.header__content h1{
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 6rem;
+    color: var(--white);
+
+}
+
+.header__content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--white);
+
+}
+
+.header__content p{
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.header__image{
+    position: relative;
+
+}
+
+.header__image::before{
+    content: 'o';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: trasnaltex(-50%);
+    font-size: 40rem;
+    font-weight: 400;
+    color: var(--secondary-color);
+    opacity: .1;
+    z-index: -1;
+
+}
+
+.header__image img{
+    max-width: 150px;
+    margin: auto;
+    
+}
+
+.get__started{
+    margin: 40px;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--white);
+    position: absolute;
+
+}
+
+
+    
+   
+
+
+.container {
+    display: block; 
+    gap: 10px;
+    margin-right: 100px; 
+}
+
+.image2 {
+    display: block;
+    margin: auto;
+    max-width: 100%; 
+    height: auto;
+    
+
+}
+
+.marginforTitles2 {
+    margin-left: -100px;
+    margin-top:  50px;
+    display: flex;
+
+}
+
+
+nav {
+    background-color:black; 
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0;
+    display: flex; 
+}
+
+nav ul li {
+    flex: 1; 
+}
+
+nav ul li a {
+    display: block; 
+    padding: 5px ; 
+    text-align: center; 
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+    
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 7px 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    z-index: 3;
+    border-radius: 7px;
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+.cart-table th {
+    width: 100%;
+    margin-bottom: 20px;
+   
+    
+}
+    
+   
+    
+
+
+.cart-table th, .cart-table td {
+    border: 1px solid  #FFFFFF;
+    padding: 10px;
+    text-align: center;
+      
+}
+
+
+
+input[type="number"] {
+    width: 50px;
+    text-align: center;
+}
+
+.cart-summary {
+    text-align: right;
+    font-size: 18px;
+}
+
+.checkout-button {
+    padding: 3px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 270px;
+    font-weight: 400;
+    padding-top: 5px;
+}
+
+.checkout-button:hover {
+    background-color: #45a049;
+    font-weight:500;
+    text-decoration: underline;
+    border: 1px solid black;
+    box-shadow: 5px 5px 12px  black;
+}
+
+
+.background-image {
+    background: url('../photos/gymPhoto.jpg') no-repeat center center; 
+    background-size: cover; 
+    position: fixed; 
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 1);
+
+}
+
+/* .background-image {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-attachment: fixed;
+} */
+
+
+h1 {
+    position: relative; 
+    z-index: 2; 
+    color: white; 
+    text-align: center; 
+    padding-top: 14%; 
+    font-size: 64px;
+    font-weight: 700;
+}
+
+h2 {
+    position: relative; 
+    z-index: 2; 
+    color: white; 
+    text-align: center; 
+    padding-top: 10%; 
+    font-size: 50px;
+    font-weight: 600;
+}
+
+h3 {
+    font-style: italic;
+    font-weight: 500;
+}
+
+
+.divider {
+    width: 80%;
+    border: 1.5px solid white;
+    margin: 20px auto; 
+    z-index: 2;
+    position: relative;
+}
+
+.mission, .call-to-action, .newsletter-signup{
+    text-align: center;
+    position: relative; 
+    font-size: medium;
+    font-weight: 700;
+    color: white;
+    
+    z-index: 2;
+    margin-left: 175px;
+    margin-right: 175px;
+}
+
+.newsletter-signup input {
+    
+    padding: 7px;
+}
+
+.mission > article, .call-to-action > p, .call-to-action > article {
+    letter-spacing: 1.5px;
+    line-height:2;
+
+}
+
+.sameSubTexts {
+    letter-spacing: 1.5px;
+    line-height:2;
+    font-size:20px;
+
+}
+
+#location {
+    letter-spacing: 1.5px;
+    line-height:2;
+    font-size:20px;
+}
+.call-to-action {
+    margin-top: 10px; 
+}
+
+.small-button {
+    display: inline-block;
+    margin-top: 10px; 
+    padding: 10px 20px;
+    background-color: rgba(179, 0, 0, 1); 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 7px; 
+    letter-spacing: 1px;
+}
+
+.small-button:hover, .small-button:active {
+    background-color: maroon; 
+    font-weight: bolder;
+    border-color: #111317;
+    box-shadow: 2px 2px solid black;
+}
+
+
+.shadow {
+    text-shadow: 5px 5px maroon;
+    font-weight: 700;
+    margin-top: -70px;
+  }
+
+#navigationButtons {
+    background-color: rgba(64, 64, 64, 0.8);
+
+}
+
+.shadow {
+    text-shadow: 5px 5px maroon;
+  }
+
+
+
+ .registrationForm {
+    position: relative;
+    z-index: 3; 
+    background-color: rgba(64, 64, 64, 0.8); 
+    padding: 50px;
+    border-radius: 10px; 
+    max-width: 700px;
+    height: 650px;
+    margin-left: 350px;
+    margin-top: 0px;
+    box-shadow:  5px 5px rgba(0, 0, 0, 0.5); 
+    
+}  
+
+.form-group > label{
+    font-size: 25px;
+    color: black;
+    position: relative;
+    top: -10px; 
+    padding: 2px; 
+    font-weight: bold;
+    text-shadow: 2px 2px maroon;
+    
+    
+}
+
+.registrationForm input, select {
+    width: 100%; 
+    padding: 7px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-bottom: -30px;
+    margin-top: 5px;
+    
+   
+}
+
+
+
+#registrationButton {
+
+    text-align: center;
+    margin-top: 35px;
+} 
+
+
+#hometaskbar{
+   font-size: 50px;
+
+}
+   
+#productstaskbar{
+   font-size: 50px;
+}
+
+
+/*Nova reg forma*/
+.form-label{
+    font-size: 20px;
+    color: black;
+    padding: 2px; 
+    font-weight: bold;
+    margin-bottom: -5px;
+    
+    
+}
+
+.form-check-label, .form-check-input{
+    color: black !important;
+    border-color: black !important ;
+
+}
+
+.form-check-input:checked {
+    background-color: maroon!important;  
+    border-color:  maroon!important; ;
+     
+}
+
+input.form-control {
+    width: 100%;
+  }
+
+
+#hometaskbar{
+    margin-left: -370px;
+    font-size: 35px;
+   
+  
+}
+
+#productstaskbar{
+    margin-left: -200px;
+    font-size: 35px;
+}
+
+#carttaskbar{
+    margin-left: -100px;
+    font-size: 35px;
+
+}
+
+#logintaskbar{
+    margin-left: -100px;
+    font-size: 35px;
+
+}
+
+#loginpage{
+    size-adjust: 50px;
+}
+
+
+@media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 12px;
+    }
+  }
+    
+
+
+
+
+
+
+
+
+/*FOOTER*/
+
+footer {
+    display: flex;
+    background-color: rgb(32, 32, 32);
+    justify-content: center;
+    align-items: center; 
+    height: 300px;
+    color: white;
+    text-align: center;
+    margin: 0px;
+} 
+
+#footer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    z-index: 2;
+    margin-bottom: 75px;
+    margin-right: 29px;
+    margin-left: 29px;
+    flex-direction: row;
+    align-items: center; 
+    flex-direction: column; 
+    margin: 0px;
+}
+
+
+.customLink{
+    color:white;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.customLink:active, .customLink:hover {
+    color:rgba(179, 0, 0, 1);
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-decoration: underline;
+}
+
+
+
+#footerID > li {
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+    font-size: medium;
+}
+
+
+/*pRODUCTS STRANICA*/
+
+/*KARTICE*/
+
+.card {
+    z-index: 2;
+}
+
+
+/* za tabelu na Cart stranici */
+.container {
+    position: relative;
+    z-index: 3; 
+    color: white;
+    margin-top: 20px;
+}
+
+/* Cart Strasnicas novi csss */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.cart-table th, .cart-table td {
+    
+    border: 1px solid grey;
+    color:#111317
+}
+
+.cart-summary {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-align: right;
+    color: #111317;
+}
+
+.checkout-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.checkout-button:hover {
+    background-color: #218838;
+}
+
+/*Navigacija*/ 
+
+.navbar-custom .nav-link:hover,.navbar-custom .nav-link:active {
+    color: maroon; 
+    font-weight: bolder;
+}
+
+
+.navbar-custom {
+    background-color: rgba(64, 64, 64, 1);
+    padding: 10px 20px;
+  }
+
+
+  .navbar-custom .nav-link, .navbar-custom .navbar-brand {
+    color: #fff;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition-duration: 0.2s;
+  }
+  .navbar-custom .btn-outline-light, .navbar-custom .btn-primary {
+    font-size: 1.1rem;
+  }
+
+
+.navigationButton {
+    background-color: rgba(179, 0, 0, 1);
+    border: 2px solid maroon;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navigationButton:hover, .navigationButton:active {
+    background-color: maroon;
+    border-color: black;
+    color: white;
+}
+
+#navigationButtonCustom {
+    color:white;
+}
+
+#navigationButtonCustom:hover, #navigationButtonCustom:active  {
+    color:white;
+    font-weight: bolder;
+}
+
+
+#registrationFormTitle{
+    
+    background-color:maroon;
+    font-weight: bolder;
+    text-shadow: 5px 3px #111317;
+} 
+ 
+
+#submitBtn {
+
+    background-color:rgba(179, 0, 0, 1);
+    text-shadow: 5px 3px #111317;
+    margin-top: 50px;
+    font-weight: bolder;
+
+}
+    
+#submitBtn:hover, #submitBtn:active{
+    font-weight: 900;
+    text-decoration: underline;
+    box-shadow: 5px 5px 12px  black;
+    border-color: black;
+    background-color:maroon;
+}
+
+
+#gymVideo {
+    width: 750px;
+    height: 290px;
+
+}
+
+.employeesContainer {
+    width: 100%;
+    height: 420px;
+    background-color: maroon;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-around;
+    
+    border-radius: 7px;
+}
+.employee {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.styled-picture {
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 9px;
+    
+    width: 240px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.styled-picture:hover {
+    width: 250px;
+    height: 320px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.centerContainer{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding-top: 15px;
+
+}
+.coordinatesDiv {
+    background-color: maroon;
+    padding:15px;
+    margin-bottom: 15px;
+    text-align:center;
+    border-radius: 7px;
+    color: white;
+
+}
+
+
+#feedbackForm {
+    background-color: rgba(64, 64, 64, 0.8); 
+   
+    border-radius: 10px; 
+    max-width: 700px;
+    height: 650px;
+    box-shadow:  5px 5px rgba(0, 0, 0, 0.5); 
+    
+}
+
+
+.section {
+    margin-top: 60px;
+}
+
+
+@media (max-width: 576px) {
+    .shadow {
+        font-size: 1.8rem;
+    }
+    .fs-4 {
+        font-size: 1.2rem;
+    }
+}
+
+/*Products*/
+
+.productsCard {
+    margin: 15px;
+    color: black;
+}
+
+
+
+.productsButtons {
+    background-color: red;
+    border: 2px solid maroon;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 17px;
+    color: white;
+    margin-top: 20px;
+    transition-duration: 0.3s;
+
+}
+
+.productsButtons:hover, .productsButtons:active {
+    background-color: maroon;
+    border-color: black;
+    color: white;
+    text-decoration: underline;
+    box-shadow: 5px 5px 12px  black;
+}
+
+
+
+/*Tabela cart str*/
+
+.customHeader > th {
+    background-color: maroon;
+    color:white;
+    text-align: center;
+    font-weight: 700;
+
+
+}
+
+
+
+/*najnoviji css za kartice na products stranici*/
+.card {
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.card img {
+    height: 170px; 
+    object-fit: contain; 
+    margin-bottom: 10px; 
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+/*Responsiveness for title andf text*/
+
+    .background-image h1 {
+        font-size: 3rem; 
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .mission p {
+        font-size: 1.5rem; 
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .background-image h1 {
+            font-size: 2rem; 
+            padding-top: 50px; 
+        }
+
+        .mission p {
+            font-size: 1.25rem; 
+        }
+    }
+
+    @media (max-width: 576px) {
+        .background-image h1 {
+            font-size: 1.5rem; 
+            padding-top: 30px; 
+        }
+
+        .mission p {
+            font-size: 1rem; 
+        }
+    }
+
+#successfulMarkSymbol {
+    width:130px;
+    height:120px;
+    padding-bottom: 10px;
+}

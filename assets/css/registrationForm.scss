@@ -1,0 +1,57 @@
+$primary-color: maroon;
+$secondary-color: rgba(179, 0, 0, 1);
+$text-shadow-color: #111317;
+$box-shadow-color: black;
+$font-weight-bold: bolder;
+$font-weight-extra-bold: 900;
+$margin-top-large: 50px;
+$padding-small: 7px;
+
+
+
+@mixin text-style($weight, $shadow-color) {
+    font-weight: $weight;
+    text-shadow: 5px 3px $shadow-color;
+  }
+  
+@mixin button-hover-effect {
+    font-weight: $font-weight-extra-bold;
+    text-decoration: underline;
+    box-shadow: 5px 5px 12px $box-shadow-color;
+    border-color: $box-shadow-color;
+    background-color: $primary-color;
+}
+  
+
+#registrationFormTitle {
+    background-color: $primary-color;
+    @include text-style($font-weight-bold, $text-shadow-color);
+}
+  
+#submitBtn {
+    background-color: $secondary-color;
+    @include text-style($font-weight-bold, $text-shadow-color);
+    margin-top: $margin-top-large;
+
+    &:hover,
+    &:active {
+    @include button-hover-effect;
+    }
+}
+
+.registrationForm {
+    input, select {
+    width: 100%;
+    padding: $padding-small;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: -30px;
+    }
+}
+
+#registrationButton {
+    text-align: center;
+    margin-top: 35px;
+}
+
