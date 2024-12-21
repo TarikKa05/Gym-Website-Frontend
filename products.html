@@ -10,6 +10,26 @@
 </head>
 
 <body>
+  <style>
+    .product-image {
+    width: 300px; 
+    height: auto; 
+    margin: 15px auto; 
+    display: block; 
+    transition: transform 0.3s ease; 
+    
+  }
+
+  .card:hover .product-image {
+    transform: scale(1.2); 
+  }
+
+  .card {
+    margin-bottom: 20px; 
+  }
+  
+  
+  </style>
   <header>
     <nav class="navbar navbar-expand-lg navbar-custom">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -47,8 +67,6 @@
 
 
 
-
-
       <section id="productCards">
         <div class="container my-5" style="display: flex;">
           <div class="row justify-content-center gy-4">
@@ -56,53 +74,56 @@
               <div class="card h-100 text-center text-black" class="productCards">
                 <div class="card-body">
                   <h3 class="card-title"><b>Whey Protein</b></h3>
-                  <img src="assets/photos/Whey protein.webp" alt="Whey Powder Protein Product Picture">
-                  <p class="card-text">Whey protein is a mixture of proteins isolated from whey, the liquid material
-                    created as a by-product of cheese production.</p>
-                  <a href="#" class="productsButtons" data-bs-toggle="modal"
-                    data-bs-target="#nutritiveValues1Modal">Learn More</a>
+                  <img
+                  class="product-image"
+                  src="assets/photos/Whey protein.webp"
+                  alt="Whey Powder Protein Product Picture"
+                />
+                  
+                  <a href="WheyProtein.html" class="productsButtons">View More</a>
                   <a href="cart.html" class="productsButtons">Buy</a>
                 </div>
               </div>
             </div>
+
             <div class="col-12 col-md-4">
               <div class="card h-100 text-center text-black">
                 <div class="card-body">
                   <h3 class="card-title"><b>Creatine</b></h3>
-                  <img src="assets/photos/creatin.png" alt="Creatine Powder Protein Product Picture">
-                  <p class="card-text">Creatine is a natural source of energy that helps your skeletal muscles flex
-                    (contract).Speed up muscle recovery and muscle fibers.</p>
-                  <a href="#" class="productsButtons" id="creatin1" data-bs-toggle="modal"
-                    data-bs-target="#nutritiveValues2Modal">Learn More</a>
+                  
+                  <img
+                  class="product-image"
+                  src="assets/photos/creatin.png"
+                  alt="Creatine Powder Protein Product Picture"
+                />
+                 
+                  <a href="Creatin.html" class="productsButtons">View More</a>
                   <a href="cart.html" class="productsButtons">Buy</a>
                 </div>
               </div>
             </div>
+
             <div class="col-12 col-md-4">
               <div class="card h-100 text-center text-black">
                 <div class="card-body">
                   <h3 class="card-title"><b>Omega 3</b></h3>
-                  <img src="assets/photos/omega 3.webp" alt="Omega 3 Pills Product Picture">
-                  <p class="card-text">Omega-3 fatty acids are “healthy fats” that may support your heart health. One
-                    key benefit is helping to lower your triglycerides.(Fish Oil)</p>
-                  <a href="#" class="productsButtons" data-bs-toggle="modal"
-                    data-bs-target="#nutritiveValues3Modal">Learn More</a>
+                  
+                  <img
+              class="product-image"
+              src="assets/photos/omega 3.webp"
+              alt="Omega 3 Pills Product Picture"
+            />
+                 
+                  <a href="Omega3.html" class="productsButtons">View More</a>
                   <a href="cart.html" class="productsButtons">Buy</a>
-
                 </div>
               </div>
             </div>
           </div>
         </div>
-    </div>
+      </section>
 
-
-    </section>
-
-
-   
-
-    <footer class="footer text-center mt-5 mb-0">
+    <footer class="footer text-center mt-5 mb-0 ">
       <div class="container" id="footer">  
         <ul class="list-inline">
           <li class="list-inline-item"><a href="https://www.instagram.com/gymlist/?hl=en" target="_blank"
@@ -119,238 +140,12 @@
         </ul>
         <p><b>&copy; IBU 061 Foundations of Web Development - Tarik Korman</b></p>
       </div>
-    </footer>
+    </footer> 
     
     
   </div>
   
   </div>
-
-  <!-- Modal za nutritivne rijedosti 1  -->
-  <div class="modal fade" id="nutritiveValues1Modal" tabindex="-1" aria-labelledby="nutritiveValues1ModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3>Whey Protein Nutritive Values</h3>
-        </div>
-        <div class="modal-body">
-          <p>Here are the nutritional values for Whey Protein:</p>
-          <div class="table">
-            <table class="table table-responsive table-striped table-bordered">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Nutrition Facts</th>
-                  <th>Per Serving (1 Scoop)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Calories</td>
-                  <td>75 kcal</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Protein</td>
-                  <td>24g</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Total Fat</td>
-                  <td>2g</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Saturated Fat</td>
-                  <td>1g</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Carbohydrates</td>
-                  <td>4g</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Fiber</td>
-                  <td>0g</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>Sugars</td>
-                  <td>1g</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>Sodium</td>
-                  <td>60mg</td>
-                </tr>
-                <tr>
-                  <td>9</td>
-                  <td>Calcium</td>
-                  <td>150mg</td>
-                </tr>
-                <tr>
-                  <td>10</td>
-                  <td>Iron</td>
-                  <td>1mg</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="productsButtons" data-bs-dismiss="modal">Close</button>
-          <a href="cart.html" class="productsButtons">Buy</a>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Modal za nutritivne rijedosti 1  -->
-  <div class="modal fade" id="nutritiveValues2Modal" tabindex="-1" aria-labelledby="nutritiveValues2ModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3>Creatine Nutritive Values</h3>
-        </div>
-        <div class="modal-body">
-          <p>Here are the nutritional values for Creatine:</p>
-          <div class="table">
-            <table class="table table-responsive table-striped table-bordered">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Nutrition Facts</th>
-                  <th>Per Serving (1 Scoop)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Calories</td>
-                  <td>0 kcal</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Protein</td>
-                  <td>10g</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Total Fat</td>
-                  <td>15g</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Saturated Fat</td>
-                  <td>1g</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Carbohydrates</td>
-                  <td>23g</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Creatin monohydrate</td>
-                  <td>5g</td>
-                </tr>
-
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="productsButtons" data-bs-dismiss="modal">Close</button>
-          <a href="cart.html" class="productsButtons">Buy</a>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal za nutritivne rijedosti 1  -->
-  <div class="modal fade" id="nutritiveValues3Modal" tabindex="-1" aria-labelledby="nutritiveValues3ModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3>Omega 3 Nutritive Values</h3>
-        </div>
-        <div class="modal-body">
-          <p>Here are the nutritional values for Omega 3:</p>
-          <div class="table">
-            <table class="table table-responsive table-striped table-bordered">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Nutrition Facts</th>
-                  <th>Per Serving (1 Scoop) or 5ml</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Calories</td>
-                  <td>40-45 kcal</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Protein</td>
-                  <td>0g</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Total Fat</td>
-                  <td>4,5-5</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Saturated Fat</td>
-                  <td>1g</td>
-                </tr>
-                <tr>
-
-                <tr>
-                  <td>7</td>
-                  <td>Sugars</td>
-                  <td>1g</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>DHA</td>
-                  <td>0,5-1g</td>
-                </tr>
-                <tr>
-                  <td>9</td>
-                  <td>EPA</td>
-                  <td>0,5-1g</td>
-                </tr>
-
-
-
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="productsButtons" data-bs-dismiss="modal">Close</button>
-          <a href="cart.html" class="productsButtons">Buy</a>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
