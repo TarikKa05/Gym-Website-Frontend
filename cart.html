@@ -11,6 +11,13 @@
 
   <title>Cart</title>
 </head>
+<style>
+  .btn-sm-custom {
+    font-size: 25px;
+    padding: 10px 12px;
+    border-radius: 3px;
+  }
+</style>
 
 <body>
 
@@ -174,13 +181,13 @@
         <td>
           <div class="d-flex align-items-center">
             <span id="quantity-display-${index}">${product.quantity || 0}</span>
-            <button class="btn btn-sm btn-primary ms-2" onclick="showEditModal(${index})">Edit</button>
+            <button class="btn btn-sm btn-primary ms-2 btn-sm-custom" onclick="showEditModal(${index})">Edit</button>
           </div>
         </td>
         <td>${product.price || 0}$</td>
         <td id="total-price-${index}">${totalPrice}$</td>
         <td>
-          <button class="btn btn-sm btn-danger" onclick="resetProduct(${index})">Reset</button>
+          <button class="btn btn-sm btn-danger btn-sm-custom" onclick="resetProduct(${index})">Reset</button>
         </td>
       </tr>
     `;

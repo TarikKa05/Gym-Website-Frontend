@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script src="assets/js/script.js?v=1.0"></script>
   <title>Gym Club</title>
@@ -21,6 +21,7 @@
     width: 100%;
     height: auto;
     cursor: pointer;
+
     border: 2px solid #ddd;
     border-radius: 5px;
     transition: transform 0.2s;
@@ -41,7 +42,7 @@
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 1050;
   }
 
   .modal img {
@@ -107,6 +108,25 @@
     margin-bottom: 10px;
 
   }
+
+
+  /* TEMA */
+  body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.theme-icon {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+  
 </style>
 
 <body>
@@ -124,37 +144,22 @@
         </ul>
         <button class="navigationButton"><a class="nav-link" id="navigationButtonCustom"
             href="registrationPage.html">Sign In</a></button>
+            <span id="themeSwitcher" class="theme-icon">🌗</span>
 
-        <link rel="stylesheet" href="styles.css">
+        <!-- <link rel="stylesheet" href="styles.css"> -->
         </head>
-
-        <body class="light">
-          <div>
-            <button onclick="setTheme('light')">Light Theme</button>
-            <button onclick="setTheme('dark')">Dark Theme</button>
-            <button onclick="setTheme('blue')">Blue Theme</button>
-          </div>
-          <script src="script.js"></script>
-
-          <!-- <div class="dropdown ms-3">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-text-height"></i> Font Size
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="fontSizeDropdown">
-                <button class="dropdown-item" onclick="changeFontSize('small')">Small</button>
-                <button class="dropdown-item" onclick="changeFontSize('medium')">Medium</button>
-                <button class="dropdown-item" onclick="changeFontSize('large')">Large</button>
-              </ul>
-            </div> -->
+        </div>
 
       </div>
     </nav>
   </header>
 
   <div class="container-fluid background-image">
-
+    <body class="dark">
+      <body class="light">
 
     <section id="introduction">
+
 
       <div class="container section text-center">
         <h1 class="shadow display-5">BUILD YOUR BODY</h1>
@@ -229,22 +234,7 @@
 
       <hr class="divider">
 
-      <!-- <section>
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <button class="faq-question">What is Gym Club?</button>
-            <div class="faq-answer">Gym Club is a place where individuals can achieve their health and wellness goals.</div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">How can I join Gym Club?</button>
-            <div class="faq-answer">You can join by signing up through the registration page on our website.</div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">What are the membership benefits?</button>
-            <div class="faq-answer">Members get access to exclusive gym programs and personalized health plans.</div>
-        </div>
-    </section>
- -->
+    
 
       <section class="faq-section mt-5">
         <h2>Frequently Asked Questions</h2>
@@ -354,6 +344,7 @@
 
 
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 
   <script>
@@ -488,26 +479,37 @@
 
 
 
-    // TEMAA
-    function setTheme(theme) {
-      // Remove all theme classes from the body
-      document.body.classList.remove('light', 'dark', 'blue');
-      // Add the selected theme class to the body
-      document.body.classList.add(theme);
-      // Save the user's choice in localStorage
-      localStorage.setItem('selectedTheme', theme);
+    
+
+    function toggleTheme() {
+      const body = document.body;
+
+      // Toggle between dark and light
+      if (body.classList.contains('dark')) {
+        body.classList.remove('dark');
+        body.classList.add('light');
+        document.getElementById('themeSwitcher').textContent = '🌞'; // Light mode icon
+      } else {
+        body.classList.remove('light');
+        body.classList.add('dark');
+        document.getElementById('themeSwitcher').textContent = '🌗'; // Dark mode icon
+      }
+
+      // Save the theme to localStorage
+      localStorage.setItem('selectedTheme', body.classList.contains('dark') ? 'dark' : 'light');
     }
 
-    // Load the saved theme when the page loads
     document.addEventListener('DOMContentLoaded', () => {
-      const savedTheme = localStorage.getItem('selectedTheme') || 'light';
-      setTheme(savedTheme);
+      // Apply saved theme
+      const savedTheme = localStorage.getItem('selectedTheme') || 'dark';
+      document.body.classList.add(savedTheme);
+
+      // Update theme icon
+      document.getElementById('themeSwitcher').textContent = savedTheme === 'dark' ? '🌗' : '🌞';
+
+      // Attach event to theme switcher
+      document.getElementById('themeSwitcher').addEventListener('click', toggleTheme);
     });
-
-
-
-
-
 
   </script>
 

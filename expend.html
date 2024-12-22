@@ -7,25 +7,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css" />
   <title>Products</title>
-</head>
-
-<body>
   <style>
-    body,
-    html {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     .product-image {
       width: 300px;
       height: auto;
-      margin: 0px;
-      padding: 0px;
+      margin: 15px auto;
       display: block;
       transition: transform 0.3s ease;
-
     }
 
     .card:hover .product-image {
@@ -37,29 +25,27 @@
     }
 
     footer.footer {
-      width: 1400px;
-      margin-left: -150px;
+      width: 100%;
       background-color: rgb(32, 32, 32);
-      ;
       color: white;
-      /* padding: 20px 0; */
+      padding: 20px 0;
       position: relative;
       left: 0;
       right: 0;
-      box-sizing: border-box;
     }
 
     footer.footer .footer-content {
-      max-width: 100%;
+      width: 100%;
+      max-width: none;
       margin: 0 auto;
       text-align: center;
     }
 
-    /* footer.footer ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-} */
+    footer.footer ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
     footer.footer ul.list-inline {
       display: flex;
@@ -77,54 +63,32 @@
       padding-top: 10px;
     }
 
-    .accordion {
-      margin-top: 0;
-    }
-
     .accordion-item {
       border: none;
-      margin: 5px 0;
-      background-color: rgba(64, 64, 64, 1);
+      margin-bottom: 10px;
+      background-color: #f8f9fa;
       border-radius: 5px;
     }
 
     .accordion-button {
-      background-color: rgba(64, 64, 64, 1);
+      background-color: #007bff;
       color: white;
       font-weight: bold;
-      font-size: 18px;
-      padding: 10px 5px;
-    }
-
-    .accordion-button:not(.collapsed) {
-      background-color: red;
-      color: white;
-      border-color: maroon;
     }
 
     .accordion-button.collapsed {
-      background-color: maroon;
+      background-color: #6c757d;
       color: white;
     }
 
     .accordion-body {
-      background-color: rgba(64, 64, 64, 1);
-      color: white;
-
-    }
-
-    #faqAccordion h1 {
-      margin-top: 0;
-      padding: 0;
-    }
-
-
-
-    .paddingsOnFAQ {
-
-      padding: 5px;
+      background-color: #f8f9fa;
+      color: #333;
     }
   </style>
+</head>
+
+<body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-custom">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -138,40 +102,30 @@
           <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
         </ul>
         <button class="navigationButton"><a class="nav-link" id="navigationButtonCustom"
-            href="registrationPage.html">Sign
-            In</a></button>
+            href="registrationPage.html">Sign In</a></button>
       </div>
     </nav>
-
   </header>
 
   <div class="background-image">
-
-
-    <div class="container  text-center ps-3 pe-3" style="align-items: center;">
-
+    <div class="container text-center ps-3 pe-3" style="align-items: center;">
       <h1 class="shadow fs-1 fs-md-2 fs-lg-3" style="padding-top: 100px;">Explore Our Products</h1>
-
       <hr class="divider">
-
       <div class="fs-1 fs-md-4 fs-lg-3 text-center" id="best">
-        <p class="sameSubTexts">We offer only the best 3 products to improve your training. Before usage, contact an <a
+        <p class="sameSubTexts">We offer only the best 3 products to improve your training. Before usage, contact a <a
             href="https://www.vhi.ie/members/directory-of-consultants" target="_blank" class="customLink">health
             consultant.</a></p>
       </div>
-
-
 
       <section id="productCards">
         <div class="container my-5" style="display: flex;">
           <div class="row justify-content-center gy-4">
             <div class="col-12 col-md-4">
-              <div class="card h-100 text-center text-black" class="productCards">
+              <div class="card h-100 text-center text-black">
                 <div class="card-body">
                   <h3 class="card-title"><b>Whey Protein</b></h3>
                   <img class="product-image" src="assets/photos/Whey protein.webp"
                     alt="Whey Powder Protein Product Picture" />
-
                   <a href="WheyProtein.html" class="productsButtons">View More</a>
                   <a href="cart.html" class="productsButtons">Buy</a>
                 </div>
@@ -182,10 +136,8 @@
               <div class="card h-100 text-center text-black">
                 <div class="card-body">
                   <h3 class="card-title"><b>Creatine</b></h3>
-
                   <img class="product-image" src="assets/photos/creatin.png"
                     alt="Creatine Powder Protein Product Picture" />
-
                   <a href="Creatin.html" class="productsButtons">View More</a>
                   <a href="cart.html" class="productsButtons">Buy</a>
                 </div>
@@ -196,9 +148,7 @@
               <div class="card h-100 text-center text-black">
                 <div class="card-body">
                   <h3 class="card-title"><b>Omega 3</b></h3>
-
                   <img class="product-image" src="assets/photos/omega 3.webp" alt="Omega 3 Pills Product Picture" />
-
                   <a href="Omega3.html" class="productsButtons">View More</a>
                   <a href="cart.html" class="productsButtons">Buy</a>
                 </div>
@@ -207,11 +157,12 @@
           </div>
         </div>
       </section>
+
       <section id="faqAccordion" class="mt-5">
-        <h1 class="shadow text-center mb-4">FAQs</h1>
+        <h1 class="text-center mb-4">FAQs</h1>
         <div class="accordion" id="accordionExample">
           <div class="accordion-item">
-            <h2 class="accordion-header paddingsOnFAQ" id="headingOne">
+            <h2 class="accordion-header" id="headingOne">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                 aria-expanded="true" aria-controls="collapseOne">
                 What is your return policy?
@@ -226,9 +177,9 @@
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header paddingsOnFAQ" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
                 Do you offer free shipping?
               </button>
             </h2>
@@ -240,7 +191,7 @@
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header paddingsOnFAQ" id="headingThree">
+            <h2 class="accordion-header" id="headingThree">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 How can I contact customer support?
@@ -249,8 +200,8 @@
             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
               data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                You can contact our customer support team via email at tarik.korman@stu.ibu.edu.ba or call us at
-                +387603210136.
+                You can contact our customer support team via email at support@example.com or call us at
+                1-800-555-1234.
               </div>
             </div>
           </div>
@@ -270,25 +221,15 @@
           <ul class="list-unstyled">
             <li><b>Contact: </b>+387603210136</li>
             <li><b>Email: </b>gymclub@fitness.ba</li>
-            <li><b>Workig Hours: </b> 7:00 - 23:00</li>
+            <li><b>Working Hours: </b>7:00 - 23:00</li>
           </ul>
-
           <p><b>&copy; IBU 061 Foundations of Web Development - Tarik Korman</b></p>
         </div>
       </footer>
-
-
-
     </div>
-
   </div>
 
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-
 </body>
-
-
 
 </html>
