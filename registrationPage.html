@@ -62,10 +62,6 @@
                 <div class="invalid-feedback">Please enter a username.</div>
               </div>
 
-              <!-- <button type="button" class="btn btn-primary w-100 d-flex justify-content-center align-items-center" onclick="addUser()">
-                    Add User
-                  </button> -->
-
               <div class="mb-3">
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" class="form-control" id="email" required>
@@ -147,7 +143,7 @@
                 Submit
               </button>
 
-              <!-- <button type="submit" class="btn btn-primary w-100">Submit</button> -->
+              
 
             </form>
           </div>
@@ -166,7 +162,7 @@
 
   <script>
    document.getElementById("registrationForm").addEventListener("submit", function (event) {
-  event.preventDefault(); // Prevent default form submission
+  event.preventDefault(); 
 
   const fields = {
     name: document.getElementById("name"),
@@ -182,12 +178,12 @@
     gender: document.getElementById("gender"),
   };
 
-  // Reset invalid classes
+  
   for (const key in fields) {
     fields[key].classList.remove("is-invalid");
   }
 
-  // Validation
+  
   let isValid = true;
   let errorMessages = [];
 
@@ -260,11 +256,11 @@
   }
 
   if (!isValid) {
-    alert(errorMessages.join("\n")); // Show validation errors
+    alert(errorMessages.join("\n")); 
     return;
   }
 
-  // Create a JSON object from form fields
+  
   const formData = {
     name: fields.name.value.trim(),
     username: fields.username.value.trim(),
@@ -277,34 +273,34 @@
     gender: fields.gender.value.trim(),
   };
 
-  // Simulate an AJAX request
+  
   simulateAjaxRequest(formData, (response) => {
     if (response.success) {
       alert("Registration successful! Data has been saved locally.");
-      window.location.href = "products.html"; // Redirect on success
+      window.location.href = "products.html"; 
     } else {
       alert("An error occurred while processing your request.");
     }
   });
 });
 
-// Function to simulate an AJAX request
+
 function simulateAjaxRequest(data, callback) {
-  // Simulate a delay to mimic server processing
+  
   setTimeout(() => {
     try {
-      // Save to localStorage
+      
       const existingData = JSON.parse(localStorage.getItem("registrationData")) || [];
       existingData.push(data);
       localStorage.setItem("registrationData", JSON.stringify(existingData));
 
-      // Simulate a successful response
+     
       callback({ success: true });
     } catch (error) {
-      // Simulate an error response
+      
       callback({ success: false });
     }
-  }, 1000); // Simulated delay of 1 second
+  }, 1000); 
 }
 
 

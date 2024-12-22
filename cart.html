@@ -13,8 +13,8 @@
 </head>
 <style>
   .btn-sm-custom {
-    font-size: 25px;
-    padding: 10px 12px;
+    font-size: 18px;
+    padding: 7px 10px;
     border-radius: 3px;
   }
 </style>
@@ -104,7 +104,7 @@
   </div>
 
 
-  <!-- Modal za kupovinu -->
+ 
   <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -123,7 +123,7 @@
     </div>
   </div>
 
-  <!-- Modal za editovanje-->
+ 
 
   <div class="modal fade" id="editQuantityModal" tabindex="-1" aria-labelledby="editQuantityModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -158,7 +158,7 @@
 
     function loadProducts() {
       $.ajax({
-        url: 'assets/cart.json', // Path to your JSON file
+        url: 'assets/cart.json', 
         method: 'GET',
         dataType: 'json',
         success: function (data) {
@@ -174,7 +174,7 @@
     function renderTable() {
   let productsHtml = '';
   products.forEach((product, index) => {
-    const totalPrice = (product.quantity || 0) * (product.price || 0); // Ensure no NaN
+    const totalPrice = (product.quantity || 0) * (product.price || 0); 
     productsHtml += `
       <tr id="product-${index}">
         <td>${product.name}</td>
@@ -196,16 +196,16 @@
 }
 
 $('#calculateTotal').on('click', function () {
-  // Calculate the total amount
+ 
   const total = products.reduce((sum, product) => {
     const productTotal = (product.quantity || 0) * (product.price || 0);
     return sum + productTotal;
   }, 0);
 
-  // Update the total amount display below the button
+  
   $('#totalAmount').text(`Total Amount: $${total}`);
 
-  // Show the toastr success message
+  
   toastr.success(`Total Payment: $${total}. Thank you for your purchase! Soon you will receive an email with more details.`, 
     "Purchase Successful", {
     timeOut: 5000,
@@ -236,7 +236,7 @@ function resetProduct(index) {
   renderTable();
 }
 
-// Load products when the page is ready
+
 $(document).ready(function () {
   loadProducts();
 });
