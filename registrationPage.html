@@ -165,123 +165,149 @@
 
 
   <script>
-    document.getElementById("registrationForm").addEventListener("submit", function (event) {
-      event.preventDefault(); // Prevent form submission to check validation
+   document.getElementById("registrationForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent default form submission
 
-      const form = event.target;
-      let formValid = true; // Assume the form is valid initially
-      let errorMessages = []; // Collect error messages to display alerts later
+  const fields = {
+    name: document.getElementById("name"),
+    username: document.getElementById("username"),
+    email: document.getElementById("email"),
+    password: document.getElementById("password"),
+    repeatPassword: document.getElementById("repeatPassword"),
+    phoneNumber: document.getElementById("phoneNumber"),
+    height: document.getElementById("height"),
+    weight: document.getElementById("weight"),
+    country: document.getElementById("country"),
+    birthDate: document.getElementById("birthDate"),
+    gender: document.getElementById("gender"),
+  };
 
-      // Get all input fields
-      const fields = {
-        name: document.getElementById("name"),
-        username: document.getElementById("username"),
-        email: document.getElementById("email"),
-        password: document.getElementById("password"),
-        repeatPassword: document.getElementById("repeatPassword"),
-        phoneNumber: document.getElementById("phoneNumber"),
-        height: document.getElementById("height"),
-        weight: document.getElementById("weight"),
-        country: document.getElementById("country"),
-        birthDate: document.getElementById("birthDate"),
-        gender: document.getElementById("gender"),
-      };
+  // Reset invalid classes
+  for (const key in fields) {
+    fields[key].classList.remove("is-invalid");
+  }
 
-      // Reset invalid classes for all fields
-      for (const key in fields) {
-        fields[key].classList.remove("is-invalid");
-      }
+  // Validation
+  let isValid = true;
+  let errorMessages = [];
 
-      // Name validation
-      if (!fields.name.value.trim()) {
-        formValid = false;
-        fields.name.classList.add("is-invalid");
-        errorMessages.push("Please enter your name.");
-      }
+  if (!fields.name.value.trim()) {
+    isValid = false;
+    fields.name.classList.add("is-invalid");
+    errorMessages.push("Please enter your name.");
+  }
 
-      // Username validation
-      if (!fields.username.value.trim()) {
-        formValid = false;
-        fields.username.classList.add("is-invalid");
-        errorMessages.push("Please enter a username.");
-      }
+  if (!fields.username.value.trim()) {
+    isValid = false;
+    fields.username.classList.add("is-invalid");
+    errorMessages.push("Please enter a username.");
+  }
 
-      // Email validation
-      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-      if (!emailPattern.test(fields.email.value.trim())) {
-        formValid = false;
-        fields.email.classList.add("is-invalid");
-        errorMessages.push("Please enter a valid email address.");
-      }
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  if (!emailPattern.test(fields.email.value.trim())) {
+    isValid = false;
+    fields.email.classList.add("is-invalid");
+    errorMessages.push("Please enter a valid email address.");
+  }
 
-      // Password length validation
-      const password = fields.password.value.trim();
-      if (password.length < 7 || password.length > 15) {
-        formValid = false;
-        fields.password.classList.add("is-invalid");
-        errorMessages.push("Password must be between 7 and 15 characters.");
-      }
+  if (fields.password.value.trim().length < 7 || fields.password.value.trim().length > 15) {
+    isValid = false;
+    fields.password.classList.add("is-invalid");
+    errorMessages.push("Password must be between 7 and 15 characters.");
+  }
 
-      // Password match validation
-      if (fields.password.value.trim() !== fields.repeatPassword.value.trim()) {
-        formValid = false;
-        fields.repeatPassword.classList.add("is-invalid");
-        errorMessages.push("Passwords must match.");
-      }
+  if (fields.password.value.trim() !== fields.repeatPassword.value.trim()) {
+    isValid = false;
+    fields.repeatPassword.classList.add("is-invalid");
+    errorMessages.push("Passwords must match.");
+  }
 
-      // Phone number validation
-      const phonePattern = /^[0-9]+$/;
-      if (!phonePattern.test(fields.phoneNumber.value.trim())) {
-        formValid = false;
-        fields.phoneNumber.classList.add("is-invalid");
-        errorMessages.push("Please enter a valid phone number (numbers only).");
-      }
+  const phonePattern = /^[0-9]+$/;
+  if (!phonePattern.test(fields.phoneNumber.value.trim())) {
+    isValid = false;
+    fields.phoneNumber.classList.add("is-invalid");
+    errorMessages.push("Please enter a valid phone number.");
+  }
 
-      // Height validation
-      const height = parseInt(fields.height.value.trim(), 10);
-      if (isNaN(height) || height < 100) {
-        formValid = false;
-        fields.height.classList.add("is-invalid");
-        errorMessages.push("Height must be a number greater than or equal to 100 cm.");
-      }
+  if (parseInt(fields.height.value.trim(), 10) < 100) {
+    isValid = false;
+    fields.height.classList.add("is-invalid");
+    errorMessages.push("Height must be greater than or equal to 100 cm.");
+  }
 
-      // Weight validation
-      const weight = parseInt(fields.weight.value.trim(), 10);
-      if (isNaN(weight) || weight < 40) {
-        formValid = false;
-        fields.weight.classList.add("is-invalid");
-        errorMessages.push("Weight must be a number greater than or equal to 40 kg.");
-      }
+  if (parseInt(fields.weight.value.trim(), 10) < 40) {
+    isValid = false;
+    fields.weight.classList.add("is-invalid");
+    errorMessages.push("Weight must be greater than or equal to 40 kg.");
+  }
 
-      // Country validation
-      if (!fields.country.value.trim()) {
-        formValid = false;
-        fields.country.classList.add("is-invalid");
-        errorMessages.push("Please enter your country.");
-      }
+  if (!fields.country.value.trim()) {
+    isValid = false;
+    fields.country.classList.add("is-invalid");
+    errorMessages.push("Please enter your country.");
+  }
 
-      // Birthdate validation
-      if (!fields.birthDate.value.trim()) {
-        formValid = false;
-        fields.birthDate.classList.add("is-invalid");
-        errorMessages.push("Please enter a valid date of birth.");
-      }
+  if (!fields.birthDate.value.trim()) {
+    isValid = false;
+    fields.birthDate.classList.add("is-invalid");
+    errorMessages.push("Please enter a valid date of birth.");
+  }
 
-      // Gender validation
-      if (!fields.gender.value.trim()) {
-        formValid = false;
-        fields.gender.classList.add("is-invalid");
-        errorMessages.push("Please select a gender.");
-      }
+  if (!fields.gender.value.trim()) {
+    isValid = false;
+    fields.gender.classList.add("is-invalid");
+    errorMessages.push("Please select a gender.");
+  }
 
-      // Display error messages or success message
-      if (!formValid) {
-        alert(errorMessages.join("\n")); // Show all error messages at once
-      } else {
-        alert("Form submitted successfully!");
-        window.location.href = "products.html"; // Redirect to products page
-      }
-    });
+  if (!isValid) {
+    alert(errorMessages.join("\n")); // Show validation errors
+    return;
+  }
+
+  // Create a JSON object from form fields
+  const formData = {
+    name: fields.name.value.trim(),
+    username: fields.username.value.trim(),
+    email: fields.email.value.trim(),
+    phoneNumber: fields.phoneNumber.value.trim(),
+    height: parseInt(fields.height.value.trim(), 10),
+    weight: parseInt(fields.weight.value.trim(), 10),
+    country: fields.country.value.trim(),
+    birthDate: fields.birthDate.value.trim(),
+    gender: fields.gender.value.trim(),
+  };
+
+  // Simulate an AJAX request
+  simulateAjaxRequest(formData, (response) => {
+    if (response.success) {
+      alert("Registration successful! Data has been saved locally.");
+      window.location.href = "products.html"; // Redirect on success
+    } else {
+      alert("An error occurred while processing your request.");
+    }
+  });
+});
+
+// Function to simulate an AJAX request
+function simulateAjaxRequest(data, callback) {
+  // Simulate a delay to mimic server processing
+  setTimeout(() => {
+    try {
+      // Save to localStorage
+      const existingData = JSON.parse(localStorage.getItem("registrationData")) || [];
+      existingData.push(data);
+      localStorage.setItem("registrationData", JSON.stringify(existingData));
+
+      // Simulate a successful response
+      callback({ success: true });
+    } catch (error) {
+      // Simulate an error response
+      callback({ success: false });
+    }
+  }, 1000); // Simulated delay of 1 second
+}
+
+
 
 
 
