@@ -24,11 +24,9 @@
           <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
         </ul>
         <button class="navigationButton"><a class="nav-link" id="navigationButtonCustom"
-            href="registrationPage.html">Sign
-            In</a></button>
+            href="registrationPage.html">Sign In</a></button>
       </div>
     </nav>
-    </div>
   </header>
 
 
@@ -47,7 +45,7 @@
     <section id="priceTable">
       <div class="container" style="z-index: 3">
         <div class="cart-container">
-          <table class="cart-table">
+          <table id="productTable" class="cart-table"> 
             <thead>
               <tr class="customHeader">
                 <th style="width: 20%">Product</th>
@@ -60,40 +58,13 @@
             </thead>
 
             <tbody>
-              <tr>
-                <td>WHEY PROTEIN</td>
-                <td>
-                  <input type="number" value="0" min="0">
-                </td>
-                <td>40$ </td>
-                <td><input type="text" class="form-control" id="discountCode" aria-describedby="discountCodeHelp"
-                    placeholder="Enter discount code"></td>
-              </tr>
-              <tr>
-                <td>CREATINE</td>
-                <td>
-                  <input type="number" value="0" min="0">
-                </td>
-                <td>30$</td>
-                <td><input type="text" class="form-control" id="discountCode" aria-describedby="discountCodeHelp"
-                    placeholder="Enter discount code"></td>
-
-              </tr>
-              <tr>
-                <td>OMEGA 3</td>
-                <td>
-                  <input type="number" value="0" min="0">
-                </td>
-                <td>15$</td>
-                <td><input type="text" class="form-control" id="discountCode" aria-describedby="discountCodeHelp"
-                    placeholder="Enter discount code"></td>
-              </tr>
+             
             </tbody>
           </table>
           <div class="cart-summary">
             <button class="checkout-button" data-bs-toggle="modal" data-bs-target="#paymentModal">Proceed to
               payment</button>
-          </div>
+           </div>
         </div>
       </div>
     </section>
@@ -147,6 +118,42 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    // Funkcija za učitavanje JSON sadržaja preko AJAX-a
+    function loadProducts() {
+      $.ajax({
+        url: 'assets/products.json',  // Putanja do vašeg JSON fajla
+        method: 'GET',
+        dataType: 'json',
+        success: function(data) {
+          let productsHtml = '';
+          data.forEach(product => {
+            productsHtml += `
+              <tr>
+                <td>${product.name}</td>
+                <td>
+                  <input type="number" value="0" min="0">
+                </td>
+                <td>${product.price}</td>
+                <td><input type="text" class="form-control" placeholder="Enter discount code"></td>
+              </tr>
+            `;
+          });
+          $('#productTable tbody').html(productsHtml);  // Dodajemo proizvode u tabelu
+        },
+        error: function() {
+          alert('Error loading data.');
+        }
+      });
+    }
+
+    // Pozivamo funkciju da učitamo proizvode pri učitavanju stranice
+    $(document).ready(function() {
+      loadProducts();
+    });
+  </script>
 
 
 </body>

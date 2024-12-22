@@ -633,12 +633,14 @@ footer {
     color: white;
     text-align: center;
     margin: 0px;
+
 } 
 
 #footer {
     display: flex;
     justify-content: space-between;
     color: white;
+    width: 100%;
     padding: 20px;
     z-index: 2;
     margin-bottom: 75px;
@@ -648,6 +650,7 @@ footer {
     align-items: center; 
     flex-direction: column; 
     margin: 0px;
+
 }
 
 
@@ -1079,4 +1082,24 @@ footer {
   }
 
   
+  body.light {
+    background-color: #ffffff;
+    color: #000000;
+  }
   
+  body.dark {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  body.blue {
+    background-color: #add8e6;
+    color: #000080;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }

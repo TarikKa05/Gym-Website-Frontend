@@ -28,6 +28,46 @@
     margin-bottom: 20px; 
   }
   
+  footer.footer {
+  width: 100%;
+  background-color: #000; /* Adjust background color */
+  color: white; /* Text color */
+  padding: 20px 0;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+footer.footer .footer-content {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer.footer ul.list-inline {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+}
+
+footer.footer ul.list-unstyled {
+  margin-top: 10px;
+}
+
+footer.footer p {
+  margin: 0;
+  padding-top: 10px;
+}
+
+
   
   </style>
   <header>
@@ -123,24 +163,28 @@
         </div>
       </section>
 
-    <footer class="footer text-center mt-5 mb-0 ">
-      <div class="container" id="footer">  
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="https://www.instagram.com/gymlist/?hl=en" target="_blank"
-              class="customLink">Instagram</a></li>
-          <li class="list-inline-item"><a href="https://www.facebook.com/GymAndFitnessCo/" target="_blank"
-              class="customLink">Facebook</a></li>
-          <li class="list-inline-item"><a href="https://www.tiktok.com/@hardbulltraining?lang=en" target="_blank"
-              class="customLink">TikTok</a></li>
-        </ul>
-        <ul class="list-unstyled">
-          <li><b>Contact: </b>+387603210136</li>
-          <li><b>Email: </b>gymclub@fitness.ba</li>
-          <li><b>Workig Hours: </b> 7:00 - 23:00</li>
-        </ul>
-        <p><b>&copy; IBU 061 Foundations of Web Development - Tarik Korman</b></p>
-      </div>
-    </footer> 
+      <footer class="footer">
+        <div class="footer-content">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/gymlist/?hl=en" target="_blank" class="customLink">Instagram</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/GymAndFitnessCo/" target="_blank" class="customLink">Facebook</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.tiktok.com/@hardbulltraining?lang=en" target="_blank" class="customLink">TikTok</a>
+            </li>
+          </ul>
+          <ul class="list-unstyled">
+            <li><b>Contact:</b> +387603210136</li>
+            <li><b>Email:</b> gymclub@fitness.ba</li>
+            <li><b>Working Hours:</b> 7:00 - 23:00</li>
+          </ul>
+          <p><b>&copy; IBU 061 Foundations of Web Development - Tarik Korman</b></p>
+        </div>
+      </footer>
+      
     
     
   </div>
