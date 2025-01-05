@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://html5-templates.com/" />
+    <title>GYM Club SPAPP</title>
+
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/registrationForm.css">
+    <link rel="stylesheet" href="./assets/css/spapp.css">
+    
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.spapp.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+</head>
+<style>
+
+/* html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;              
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin-top: 0 auto;
+    text-align: center;
+}
+
+.footer {
+    width: 100%;                
+    background-color: rgb(32, 32, 32);
+    color: white;           
+    text-align: center;
+    font-size: 16px;
+    position: fixed;
+    margin-top: 9%;
+}
+
+#footer1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.navbar a {
+    color: white !important;  
+    text-decoration: none;
+   
+}
+
+.navbar a.active {
+    color: yellow !important;  
+}
+
+
+</style>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item"><a class="nav-link" href="#landingPage">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+              <li class="nav-item"><a class="nav-link" href="#cart">Cart</a></li>
+            </ul>
+            <button class="navigationButton"><a class="nav-link" id="navigationButtonCustom"
+                href="#register">Sign In</a></button>
+                
+    
+            
+            </head>
+            </div>
+    
+          </div>
+        </nav>
+      </header>
+    
+
+    <section id="pageContent">
+        <main id="spapp" role="main">
+            <section id="landingPage" data-load="landingPage.html">
+                
+            </section>
+            <section id="cart" data-load="cart.html">
+                
+            </section>
+            <section id="register" data-load="registrationPage.html">
+              
+            </section>
+            <section id="products" data-load="products.html">
+              
+            </section>
+          
+        </main>
+    </section>
+
+    <!-- <footer class="footer text-center mt-5 mb-0">
+        <div class="container" id="footer1">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://www.instagram.com/gymlist/?hl=en" target="_blank"
+                class="customLink">Instagram</a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/GymAndFitnessCo/" target="_blank"
+                class="customLink">Facebook</a></li>
+            <li class="list-inline-item"><a href="https://www.tiktok.com/@hardbulltraining?lang=en" target="_blank"
+                class="customLink">TikTok</a></li>
+          </ul>
+          <ul class="list-unstyled">
+            <li><b>Contact: </b>+387603210136</li>
+            <li><b>Email: </b>gymclub@fitness.ba</li>
+            <li><b>Workig Hours: </b> 7:00 - 23:00</li>
+          </ul>
+  
+          <p><b>&copy; IBU 061 Foundations of Web Development - Tarik Korman</b></p>
+        </div>
+      </footer> -->
+    
+    <script>
+    var app = $.spapp({
+        defaultView: "#landingPage",
+        templateDir: "/views/"
+    
+    });
+    
+    
+    app.run();
+
+
+// Get all navbar links
+const navLinks = document.querySelectorAll(".nav-link");
+
+// Get the current hash from the URL (e.g., "#landingPage")
+const currentHash = window.location.hash;
+
+// Loop through links and add 'active' class if href matches current hash
+navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentHash) {
+        link.classList.add("active");
+    }
+});
+
+// Optional: Change active link dynamically on scroll or when user clicks a link
+window.addEventListener("hashchange", () => {
+    // Remove 'active' class from all links
+    navLinks.forEach(link => link.classList.remove("active"));
+
+    // Add 'active' class to the currently active link
+    const newHash = window.location.hash;
+    navLinks.forEach(link => {
+        if (link.getAttribute("href") === newHash) {
+            link.classList.add("active");
+        }
+    });
+});
+</script>
+</body>
+
+</html>
