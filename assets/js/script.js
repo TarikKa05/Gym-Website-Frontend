@@ -1,5 +1,5 @@
 var app = $.spapp({
-    defaultView: "#landingPage",
+    defaultView: "#login",
     templateDir: "../../views/"
 
 });

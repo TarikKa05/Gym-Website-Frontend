@@ -10,6 +10,19 @@
   <title>Gym Club</title>
 </head>
 <style>
+
+
+  #greeting {
+    color: white;            /* Makes the text white */
+    position: absolute;      /* Positions it at the top */
+    top: 10px;               /* Adjusts the position from the top */
+    left: 50%;               /* Centers it horizontally */
+    transform: translateX(-50%); /* Ensures perfect centering */
+    z-index: 9999;           /* Ensures it appears above all other content */
+    font-size: 24px;         /* Optional: Adjust the font size */
+    font-weight: bold;       /* Optional: Make the text bold */
+  }
+
   .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -125,9 +138,11 @@
 
     <section id="introduction">
 
+      <div id="greeting" class="text-center mt-3"></div>
+
 
       <div class="container section text-center">
-        <h1 class="shadow display-5">BUILD YOUR BODY</h1>
+        <h1 class="shadow display-5" >BUILD YOUR BODY</h1>
         <p class="fs-4 font-small">At GYM Club, we try to empower individuals to achieve their
           health and wellness goals through innovative training programs, healthy supplements, and community support.
         </p>
@@ -429,6 +444,19 @@
       document.getElementById('location').innerText = `Latitude: ${latitude}, Longitude: ${longitude}`;
       fetchWeatherData(latitude, longitude);
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+ 
+  const isLoggedIn = localStorage.getItem('isLoggedIn');
+  const userName = localStorage.getItem('name');
+
+  if (isLoggedIn && userName) {
+    
+    console.log(name)
+    document.getElementById('greeting').innerHTML = `<h1>Hello, ${userName}!</h1>`;
+  }
+});
+
 
 
 

@@ -98,7 +98,7 @@
             <section id="cart" data-load="cart.html">
                 
             </section>
-            <section id="register" data-load="registrationPage.html">
+            <section id="login" data-load="loginPage.html">
               
             </section>
             <section id="products" data-load="products.html">
@@ -130,7 +130,7 @@
     
     <script>
     var app = $.spapp({
-        defaultView: "#landingPage",
+        defaultView: "#login",
         templateDir: "/views/"
     
     });
@@ -139,25 +139,23 @@
     app.run();
 
 
-// Get all navbar links
+
 const navLinks = document.querySelectorAll(".nav-link");
 
-// Get the current hash from the URL (e.g., "#landingPage")
+
 const currentHash = window.location.hash;
 
-// Loop through links and add 'active' class if href matches current hash
+
 navLinks.forEach(link => {
     if (link.getAttribute("href") === currentHash) {
         link.classList.add("active");
     }
 });
 
-// Optional: Change active link dynamically on scroll or when user clicks a link
 window.addEventListener("hashchange", () => {
-    // Remove 'active' class from all links
     navLinks.forEach(link => link.classList.remove("active"));
 
-    // Add 'active' class to the currently active link
+  
     const newHash = window.location.hash;
     navLinks.forEach(link => {
         if (link.getAttribute("href") === newHash) {
@@ -165,6 +163,23 @@ window.addEventListener("hashchange", () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  function checkLogin() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if (!isLoggedIn) {
+      alert('You must log in to access this page.');
+      window.location.href = '/#login';
+    }
+  }
+
+  window.addEventListener('hashchange', checkLogin);
+
+ 
+  checkLogin();
+});
+
+
 </script>
 </body>
 
