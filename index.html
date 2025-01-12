@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://html5-templates.com/" />
+    <title>GYM Club SPAPP</title>
+
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/registrationForm.css">
+    <link rel="stylesheet" href="./assets/css/spapp.css">
+    
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.spapp.min.js"></script>
+</head>
+<style>
+
+.navbar a {
+    color: white !important;  
+    text-decoration: none;
+   
+}
+
+.navbar a.active {
+    color: yellow !important;  
+}
+
+
+</style>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item"><a class="nav-link" href="#landingPage">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+              <li class="nav-item"><a class="nav-link" href="#cart">Cart</a></li>
+            </ul>
+            <button class="navigationButton"><a class="nav-link" id="navigationButtonCustom"
+                href="#login">Sign In</a></button>
+                
+    
+            
+            </head>
+            </div>
+    
+          </div>
+        </nav>
+      </header>
+    
+
+    <section id="pageContent">
+        <main id="spapp" role="main">
+            <section id="landingPage" data-load="landingPage.html">
+                
+            </section>
+            <section id="cart" data-load="cart.html">
+                
+            </section>
+            <section id="login" data-load="loginPage.html">
+              
+            </section>
+            <section id="products" data-load="products.html">
+              
+            </section>
+          
+        </main>
+    </section>
+
+
+    <script>
+    var app = $.spapp({
+        defaultView: "#login",
+        templateDir: "/views/"
+    
+    });
+    
+    
+    app.run();
+
+
+
+const navLinks = document.querySelectorAll(".nav-link");
+
+
+const currentHash = window.location.hash;
+
+
+navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentHash) {
+        link.classList.add("active");
+    }
+});
+
+window.addEventListener("hashchange", () => {
+    navLinks.forEach(link => link.classList.remove("active"));
+
+  
+    const newHash = window.location.hash;
+    navLinks.forEach(link => {
+        if (link.getAttribute("href") === newHash) {
+            link.classList.add("active");
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  function checkLogin() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if (!isLoggedIn) {
+      alert('You must log in to access this page.');
+      window.location.href = '#login';
+    }
+  }
+
+  window.addEventListener('hashchange', checkLogin);
+
+ 
+  checkLogin();
+});
+
+
+</script>
+</body>
+
+</html>

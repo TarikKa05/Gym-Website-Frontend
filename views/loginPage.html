@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/registrationForm.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+
+
+  <title>Login</title>
+</head>
+
+  <div class="background-image">
+    <section id="registrationFormInformation">
+      <div class="container my-5">
+        <div class="card mx-auto" style="max-width: 600px;border-color: maroon;">
+          <div class="card-header text-center" id="registrationFormTitle">
+
+
+            <h3>Login</h3>
+          </div>
+          <div class="card-body">
+            <form id="registrationForm" class="was-validated" novalidate>
+              <div id="userList" class="mb-3">
+
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="password" required>
+                <div class="invalid-feedback">Password must be between 7 and 15 characters.</div>
+              </div>
+
+
+
+              <button type="submit" class="btn btn-primary w-100 d-flex justify-content-center align-items-center"
+                id="submitBtn">
+                Submit
+              </button>
+
+              
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+
+  <script>
+   document.getElementById("registrationForm").addEventListener("submit", function (event) {
+  event.preventDefault(); 
+
+  const fields = {
+    email: document.getElementById("email"),
+    password: document.getElementById("password")
+   
+  };
+
+  
+  for (const key in fields) {
+    fields[key].classList.remove("is-invalid");
+  }
+
+  
+  let isValid = true;
+  let errorMessages = [];
+
+
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  if (!emailPattern.test(fields.email.value.trim())) {
+    isValid = false;
+    fields.email.classList.add("is-invalid");
+    errorMessages.push("Please enter a valid email address.");
+  }
+
+  if (fields.password.value.trim().length < 7 || fields.password.value.trim().length > 15) {
+    isValid = false;
+    fields.password.classList.add("is-invalid");
+    errorMessages.push("Password must be between 7 and 15 characters.");
+  }
+
+
+})
+
+  document.getElementById("registrationForm").addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    if (password.length < 7 || password.length > 15) {
+      alert("Password must be between 7 and 15 characters.");
+      return;
+    }
+
+    try {
+      const response = await fetch('../assets/users.json'); 
+      if (!response.ok) {
+        throw new Error('Failed to load user data');
+      }
+
+      const users = await response.json();
+
+ 
+
+      console.log('Fetched users:', users);
+console.log('Entered email:', email);
+console.log('Entered password:', password);
+
+const user = users.find(u => u.email === email && u.password === password);
+
+if (user) {
+  console.log('User found:', user);
+  localStorage.setItem('isLoggedIn', 'true');
+  localStorage.setItem('email', email);
+  localStorage.setItem('name', user.name); 
+  window.location.href = '#landingPage';
+  document.getElementById('greeting').innerHTML = `Hello, ${user.name}!`;
+  alert(`Hello, ${user.name}!`)
+} else {
+  console.log('Invalid credentials');
+  alert('Invalid email or password.');
+}
+
+
+    } catch (error) {
+      console.error('Error fetching users:', error);
+      alert("Something went wrong. Please try again later.");
+    }
+  });
+
+
+
+
+  </script>
+
+</body>
+
+</html>
