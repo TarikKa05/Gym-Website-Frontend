@@ -16,8 +16,6 @@
 
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/jquery.spapp.min.js"></script>
-    <script src="./assets/js/script.js"></script>
-
 </head>
 <style>
 
@@ -78,7 +76,7 @@
               <li class="nav-item"><a class="nav-link" href="#cart">Cart</a></li>
             </ul>
             <button class="navigationButton"><a class="nav-link" id="navigationButtonCustom"
-                href="#register">Sign In</a></button>
+                href="#login">Sign In</a></button>
                 
     
             
@@ -108,26 +106,7 @@
         </main>
     </section>
 
-    <!-- <footer class="footer text-center mt-5 mb-0">
-        <div class="container" id="footer1">
-          <ul class="list-inline">
-            <li class="list-inline-item"><a href="https://www.instagram.com/gymlist/?hl=en" target="_blank"
-                class="customLink">Instagram</a></li>
-            <li class="list-inline-item"><a href="https://www.facebook.com/GymAndFitnessCo/" target="_blank"
-                class="customLink">Facebook</a></li>
-            <li class="list-inline-item"><a href="https://www.tiktok.com/@hardbulltraining?lang=en" target="_blank"
-                class="customLink">TikTok</a></li>
-          </ul>
-          <ul class="list-unstyled">
-            <li><b>Contact: </b>+387603210136</li>
-            <li><b>Email: </b>gymclub@fitness.ba</li>
-            <li><b>Workig Hours: </b> 7:00 - 23:00</li>
-          </ul>
-  
-          <p><b>&copy; IBU 061 Foundations of Web Development - Tarik Korman</b></p>
-        </div>
-      </footer> -->
-    
+
     <script>
     var app = $.spapp({
         defaultView: "#login",
@@ -169,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     if (!isLoggedIn) {
       alert('You must log in to access this page.');
-      window.location.href = '/#login';
+      window.location.href = '#login';
     }
   }
 

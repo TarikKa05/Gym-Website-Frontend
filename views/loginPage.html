@@ -140,7 +140,9 @@ if (user) {
   localStorage.setItem('isLoggedIn', 'true');
   localStorage.setItem('email', email);
   localStorage.setItem('name', user.name); 
-  window.location.href = './#landingPage';
+  window.location.href = '#landingPage';
+  document.getElementById('greeting').innerHTML = `Hello, ${user.name}!`;
+  alert(`Hello, ${user.name}!`)
 } else {
   console.log('Invalid credentials');
   alert('Invalid email or password.');
